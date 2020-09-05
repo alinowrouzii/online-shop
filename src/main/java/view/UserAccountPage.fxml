@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.UserAccountController"
+      prefHeight="400.0" prefWidth="600.0"
+      stylesheets="@/styles/account.css"
+        styleClass="main">
+    <Button fx:id="profileButton" text="Your Profile" prefHeight="37.0" prefWidth="250.0" styleClass="btnMenu"/>
+    <Button fx:id="logsButton" text="Your Logs" prefHeight="37.0" prefWidth="250.0" layoutX="0" layoutY="37" styleClass="btnMenu"/>
+    <Button fx:id="wallet" text="Your Wallet" prefHeight="37.0" prefWidth="250.0" layoutY="74" styleClass="btnMenu" />
+    <ImageView fx:id="profilePicture" fitHeight="180.0" fitWidth="180.0" layoutX="320.0" layoutY="20.0" styleClass="profilePic" >
+        <image>
+            <Image url="@../../resources/icons/cart.png">
+            </Image>
+        </image>
+    </ImageView>
+    <Label fx:id="usernameLabel" text="Username" styleClass="username" layoutX="320.0" layoutY="200.0"/>
+    <Label fx:id="typeLabel" text="type" styleClass="type" layoutY="220" layoutX="320"/>
+    <TextField fx:id="fullNameTextField" layoutX="550.0" layoutY="50.0" promptText="FullName" styleClass="textField"/>
+    <TextField fx:id="emailTextField" layoutX="550.0" layoutY="110.0" promptText="Email" styleClass="textField"/>
+    <TextField fx:id="phoneNumTextField" layoutX="550.0" layoutY="170.0" promptText="Phone Number" styleClass="textField"/>
+    <Button fx:id="submit" styleClass="submitBtn" layoutY="170.0" layoutX="750.0" text="submit changes" />
+    <Button fx:id="chanePass" styleClass="submitBtn" layoutY="110.0" layoutX="750.0" text="change password" />
+</Pane>

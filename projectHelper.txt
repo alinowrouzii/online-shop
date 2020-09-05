@@ -1,0 +1,122 @@
+
+Manager Page:
+
+manage personal info
+    view personal info
+	edit [field]
+	back to mainPage
+
+manage users
+	view all users
+	view [username]
+	delete user [username]
+	create manager profile
+
+manage all products
+    view all products
+	remove [productId]
+
+manage discount codes
+	view all discount codes
+	view discount code [code]
+	create discount code
+	edit discount code [code]
+	remove discount code [code]
+
+manage requests
+	view all requests
+	details [requestId]
+	accept [requestId]
+	decline [requestId]
+
+manage categories
+	view all categories
+	edit [category]
+	add [category]
+	remove [category]
+
+
+
+SellerPage :
+
+view personal info
+	edit [field]
+	back to mainPage
+
+view company information
+
+view sales history
+
+manage products
+	view all products
+	view [productId]
+	buyers [productId]
+	edit [productId]
+    add product
+    remove product [productId]
+
+show categories
+
+manage offs
+	view all offs
+	view [offId]
+	edit [offId]
+	add off
+
+view balance
+
+
+
+User page:
+
+manage personal info
+    view personal info
+	edit [field]
+view cart
+	show all products
+	view [productId]
+	increase [productId]
+	decrease [productId]
+	show total price
+	purchase
+		1. receiver information
+		2. discount code
+		3. payment
+
+view orders
+	show all orders
+	show order [orderId]
+	rate [productId] [1-5]
+
+view balance
+view discount codes
+
+
+
+
+products page:
+
+view products
+view product [productId]
+    digest
+    add to cart
+    attributes
+view categories
+
+filtering
+	show available filters
+	filter [an available filter]
+	current filters
+	disable filter [a selected filter]
+
+sorting
+	show available sorts
+	sort [an available sort]
+	current sort
+	disable sort
+
+compare [productID]
+Comments
+	Add comment
+		Title:
+		Content:

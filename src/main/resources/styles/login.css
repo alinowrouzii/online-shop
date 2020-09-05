@@ -1,0 +1,203 @@
+.root {
+    -fx-background-color:  linear-gradient(lightgray, #b74cac);
+    -fx-border-color: white;
+    -fx-border-radius: 20;
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+
+}
+
+.bp {
+    -fx-background-color:  linear-gradient(gray,DimGrey );
+
+}
+
+.btnLogin {
+    /*-fx-background-radius: 30, 30, 29, 28;*/
+    -fx-background-radius: 30 30 29 30;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: linear-gradient(#16beff, #026fff);
+}
+
+.btnProducts {
+    /*-fx-background-radius: 30, 30, 29, 28;*/
+    -fx-background-radius: 30 30 29 30;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: linear-gradient(#ffc270, #ffc66f);
+}
+.btnProducts:hover {
+    -fx-background-color: linear-gradient(#fff7d7, #ffc66f);
+}
+
+.btnAboutUs {
+    /*-fx-background-radius: 30, 30, 29, 28;*/
+    -fx-background-radius: 30 30 29 30;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: linear-gradient(#aae5ff, #78d1ff);
+}
+
+.btnLogin:hover {
+    -fx-background-color: linear-gradient(#38f0ff, #1b47ff);
+}
+
+.btnSignUp {
+    -fx-background-radius: 30, 30, 29, 28;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: linear-gradient(#fff643, #ff8d27);
+}
+
+.btnSignUp:hover {
+    -fx-background-color: linear-gradient(#ffd81d, #ff741e);
+}
+
+.text-field{
+    -fx-padding: 0px 10px 0px 10px;
+    -fx-background-radius: 10, 10, 10, 10 ;
+    -fx-background-color: linear-gradient(#e9faff, #e2e6ff);
+    -fx-prompt-text-fill: #050505;
+}
+
+.forgetPasswordLink{
+    -fx-padding: 3px 0px 0px 0px;
+}
+.text {
+    -fx-fill: white;
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
+}
+
+.customBorder{
+    /*-fx-border-color: blue ;*/
+    /*-fx-border-width: 5 ;*/
+    /*-fx-border-style: segments(10, 15, 15, 15)  line-cap round ;*/
+    -fx-border-color: blue;
+    -fx-border-insets: 5;
+    -fx-border-width: 3;
+    -fx-border-style: dashed;
+}
+
+.registerLabel{
+    -fx-padding: 15px 10px px 10px;
+
+    -fx-background-color: linear-gradient(#16beff, #026fff);
+    -fx-font-size: 20;
+}
+
+.wrongInfoLabel{
+    -fx-text-fill: red;
+    -fx-padding: 3px 0px 0px 0px;
+}
+
+.signUpBackground{
+    -fx-border-radius: 100 2 1 100;
+    -fx-background-radius: 40 2 2 40;
+    -fx-background-color: linear-gradient(gray, #ff371c);
+}
+
+
+/*********************************************8SignUpPage*/
+
+
+.anchorPaneStyle{
+    -fx-padding: 15 15 15 15;
+    -fx-background-radius: 40 2 2 40;
+    /*-fx-border-height: 500px;*/
+
+    -fx-background-color: linear-gradient(#ffffff, #dfffe1);
+    -fx-margin: 150 0 0 0;
+    /*create a margin for pane*/
+    -fx-background-insets: 40 20 40 50;
+}
+
+.main-menu-button{
+    -fx-shape:"M20,0 L80,0 L100,60 L50,100 L0,60z";
+    -fx-display: inline-block;
+    -fx-stroke: #B2E230;
+}
+
+
+
+.toggle-button {
+    -fx-background-image: url('http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Pizza-icon.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.toggle-button:selected {
+    -fx-background-image: url('http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Piece-of-cake-icon.png');
+}
+
+
+
+
+
+
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+
+
+/*.root {*/
+/*    -fx-padding: 20 ;*/
+/*    cell-color: white ;*/
+/*    cell-border-color: black ;*/
+/*}*/
+.grid {
+    /* 1 pixel border around the top and right of the grid: */
+    -fx-background-color: cell-border-color, cell-color ;
+    -fx-background-insets: 0, 1 1 0 0 ;
+    -fx-padding: 1 ;
+}
+.cell {
+    /* 1 pixel border around the left and bottom of each cell: */
+    -fx-background-color: cell-border-color, cell-color ;
+    -fx-background-insets: 0, 0 0 1 1 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sign-up-page-tab .tab-header-background {
+    -fx-background-color: #256dd3;
+}
+
+
+.products-page-tab .tab-header-background {
+    -fx-background-color: #7dcade;
+}

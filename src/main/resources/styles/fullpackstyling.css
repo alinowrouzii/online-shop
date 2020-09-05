@@ -1,0 +1,164 @@
+.button
+{
+-fx-background-color : #FFF;
+-fx-border-color: #355ECE;
+-fx-text-fill:  #0C3988;
+}
+.button:hover
+{
+-fx-background-color : #355ECE ;
+-fx-text-fill:  #FFF;
+}
+.button:pressed
+{
+-fx-background-color : #0C39FF ;
+-fx-text-fill: #FFF;
+}
+
+.button2
+{
+-fx-background-color :  #0C39FF;
+-fx-border-color: #FFF;
+-fx-text-fill:  #FFF;
+}
+.button2:hover
+{
+-fx-background-color : #0C3988 ;
+-fx-text-fill:   #FFF;
+}
+.button2:pressed
+{
+-fx-background-color : #0C3400 ;
+-fx-text-fill: #FFF;
+}
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   #2D75E8;
+}
+.table-view .column-header .label{
+
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+  -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+ 
+ }
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color:derive(  #2D75E8,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+/* chart properties */
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+}
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 1%);
+    -fx-border-width: 0px;
+}
+
+
+
+
+.root {
+    -fx-background-color:  linear-gradient(lightgray, #b74cac);
+    -fx-border-color: white;
+    -fx-border-radius: 20;
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+
+}
+
+.bp {
+    -fx-background-color:  linear-gradient(gray,DimGrey );
+
+}
+
+.btnLogin {
+    -fx-background-radius: 30, 30, 29, 28;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: linear-gradient(#16beff, #026fff);
+}
+
+.btnLogin:hover {
+    -fx-background-color: linear-gradient(#38f0ff, #1b47ff);
+}
+
+.btnSignUp {
+    -fx-background-radius: 30, 30, 29, 28;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: linear-gradient(#fff643, #ff8d27);
+}
+
+.btnSignUp:hover {
+    -fx-background-color: linear-gradient(#ffd81d, #ff741e);
+}
+
+.textField{
+    -fx-padding: 0px 10px 3px 10px;
+    -fx-background-radius: 5, 5, 5, 0;
+    -fx-background-color: linear-gradient(#e9faff, #e2e6ff);
+}
+
+.forgetPasswordLink{
+    -fx-padding: 3px 0px 0px 0px;
+}
+.text {
+    -fx-fill:  linear-gradient(#f8fffd, #fff1ff);
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
+}
+
+.customBorder{
+    /*-fx-border-color: blue ;*/
+    /*-fx-border-width: 5 ;*/
+    /*-fx-border-style: segments(10, 15, 15, 15)  line-cap round ;*/
+    -fx-border-color: blue;
+    -fx-border-insets: 5;
+    -fx-border-width: 3;
+    -fx-border-style: dashed;
+}
