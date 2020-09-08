@@ -2,58 +2,68 @@ package model;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class Cart {
-    private ArrayList<Product> products;
+    private HashMap<Product,Integer> products;
     private BigInteger totalPrice ;
     private static final int REMOVE_TIME = 45 ;
     Cart(){
-        products = new ArrayList<Product>();
+        products = new HashMap<>();
         totalPrice = new BigInteger("0") ;
     }
-    void addProduct(Product product) {
-        products.add(product);
-        product.decreaseAmountOfProducts(1);
+    void addProduct(Product product,int amount) {
+        int oldAmount=0;
+        //TODO: should be checked
+        if(products.get(product) !=null){
+            oldAmount = products.get(product);
+        }
+        removeProductAfter(REMOVE_TIME, product,amount) ;
         updateTotalPrice();
-        removeProductAfter(REMOVE_TIME, product) ;
+        products.put(product,amount+oldAmount);
+        product.decreaseAmountOfProducts(amount);
     }
 
     private void updateTotalPrice() {
         totalPrice = new BigInteger("0");
-        for (Product product : products){
-            totalPrice = totalPrice.add(product.getPrice());
+        for (Product product : products.keySet()){
+            int amount = products.get(product);
+            totalPrice = totalPrice.add(product.getPrice().multiply(new BigInteger(amount+"")));
         }
     }
 
-    private void removeProductAfter(int minutes, Product product){
-        Thread thread = new Thread(new Runnable(){
-
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(minutes*60*60*1000);
-                    products.remove(product);
-                    updateTotalPrice();
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+    private void removeProductAfter(int minutes, Product product,int amount){
+        Thread thread = new Thread(() -> {
+            try {
+                Thread.sleep(minutes*60*60*1000);
+                removeProduct(product.getProductId(), amount);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         });
         thread.start();
     }
-    void removeProduct(String productId) {
-        for (Product product :products) {
+    void removeProduct(String productId,int amount) {
+        for (Product product :products.keySet()) {
             if(product.getProductId().equals(productId)){
-                products.remove(product);
-                product.addAmountOfProducts(1);
-                break ;
+                if(products.get(product)>amount){
+                    int newAmount = products.get(product) - amount;
+                    products.put(product,newAmount);
+                    product.addAmountOfProducts(amount);
+                    return;
+                }else if(products.get(product) == amount){
+                    products.remove(product);
+                    product.addAmountOfProducts(amount);
+                    return;
+                }
             }
         }
     }
     public BigInteger getTotalPrice() {
         return totalPrice ;
     }
-    public ArrayList<Product> getProducts() {
+    public HashMap<Product,Integer> getProducts() {
         return products;
     }
 }
