@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTabPane?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+
 <Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/account.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagerAccountController">
     <ImageView fitHeight="600.0" fitWidth="1000.0">
         <Image url="@../../resources/icons/sample_pic_3.jpg">
@@ -20,7 +28,6 @@
 
                 <TextField fx:id="emailTextField" layoutX="533.0" layoutY="186.0" promptText="Email" styleClass="textField" />
                 <TextField fx:id="phoneNumTextField" layoutX="533.0" layoutY="229.0" promptText="Phone Number" styleClass="textField" />
-
 
                 <ImageView fx:id="profileImageView" fitHeight="159.0" fitWidth="167.0" layoutX="53.0" layoutY="33.0" onMouseClicked="#changeProfilePicture" styleClass="profilePic">
                     <Image url="@../../resources/icons/prof_temp.png" />
@@ -47,7 +54,7 @@
         </Tab>
         <Tab text="products">
             <ScrollPane>
-                <Pane prefHeight="1464.0" prefWidth="884.0">
+                <Pane prefHeight="1500.0" prefWidth="884.0">
                     <TableView fx:id="productsView" layoutX="14.0" layoutY="15.0" prefHeight="386.0" prefWidth="870.0" />
                     <Label layoutX="26.0" layoutY="409.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="Edit Product" />
                     <Label layoutX="26.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="Product ID" />
@@ -63,33 +70,31 @@
                     <Button layoutX="388.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
                     <Button layoutX="693.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
                     <Label layoutX="26.0" layoutY="540.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="Add Product" />
-                    <Label layoutX="27.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product ID" />
-                    <Label layoutX="150.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product Name" />
-                    <Label layoutX="273.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product price" />
-                    <TextField layoutX="27.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product ID" styleClass="textField" />
-                    <TextField layoutX="150.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product name" styleClass="textField" />
-                    <TextField layoutX="273.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product price" styleClass="textField" />
-                    <Button layoutX="774.0" layoutY="616.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
-                    <Label layoutX="396.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product category" />
-                    <Label layoutX="518.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="product amount" />
-                    <TextField layoutX="396.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="category name" styleClass="textField" />
-                    <TextField layoutX="519.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="amount" styleClass="textField" />
-                    <Label layoutX="640.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="product brand" />
-                    <TextField layoutX="641.0" layoutY="615.0" prefHeight="25.0" prefWidth="108.0" promptText="brand name" styleClass="textField" />
+                    <Label layoutX="26.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product Name" />
+                    <Label layoutX="149.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product price" />
+                    <TextField layoutX="26.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product name" styleClass="textField" />
+                    <TextField layoutX="149.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product price" styleClass="textField" />
+                    <Button layoutX="693.0" layoutY="616.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
+                    <Label layoutX="272.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product category" />
+                    <Label layoutX="394.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="product amount" />
+                    <TextField layoutX="272.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="category name" styleClass="textField" />
+                    <TextField layoutX="395.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="amount" styleClass="textField" />
+                    <Label layoutX="516.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="product brand" />
+                    <TextField layoutX="517.0" layoutY="615.0" prefHeight="25.0" prefWidth="108.0" promptText="brand name" styleClass="textField" />
                     <Label layoutX="28.0" layoutY="665.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="users requests" />
-                    <TableView layoutX="14.0" layoutY="707.0" prefHeight="298.0" prefWidth="869.0"/>
-               <Label layoutX="26.0" layoutY="1018.0" prefHeight="25.0" prefWidth="172.0" styleClass="edit-remove-label" text="Accept or remove Request" />
-               <Label layoutX="234.0" layoutY="1019.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Request ID" />
-               <Button layoutX="484.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Accept!" />
-               <TextField layoutX="364.0" layoutY="1019.0" prefHeight="25.0" prefWidth="108.0" promptText="request ID" styleClass="textField" />
-               <Button layoutX="592.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
-               <Label layoutX="28.0" layoutY="1073.0" prefHeight="25.0" prefWidth="137.0" styleClass="edit-remove-label" text="products requests" />
-                    <TableView layoutX="14.0" layoutY="1115.0" prefHeight="298.0" prefWidth="869.0"/>
-               <Label layoutX="26.0" layoutY="1426.0" prefHeight="25.0" prefWidth="172.0" styleClass="edit-remove-label" text="Accept or remove Request" />
-               <Label layoutX="234.0" layoutY="1427.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Request ID" />
-               <Button layoutX="484.0" layoutY="1427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Accept!" />
-               <TextField layoutX="364.0" layoutY="1427.0" prefHeight="25.0" prefWidth="108.0" promptText="request ID" styleClass="textField" />
-               <Button layoutX="592.0" layoutY="1427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
+                    <TableView layoutX="14.0" layoutY="707.0" prefHeight="298.0" prefWidth="869.0" />
+                    <Label layoutX="26.0" layoutY="1018.0" prefHeight="25.0" prefWidth="172.0" styleClass="edit-remove-label" text="Accept or remove Request" />
+                    <Label layoutX="234.0" layoutY="1019.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Request ID" />
+                    <Button layoutX="484.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Accept!" />
+                    <TextField layoutX="364.0" layoutY="1019.0" prefHeight="25.0" prefWidth="108.0" promptText="request ID" styleClass="textField" />
+                    <Button layoutX="592.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
+                    <Label layoutX="28.0" layoutY="1073.0" prefHeight="25.0" prefWidth="137.0" styleClass="edit-remove-label" text="products requests" />
+                    <TableView layoutX="14.0" layoutY="1115.0" prefHeight="298.0" prefWidth="869.0" />
+                    <Label layoutX="26.0" layoutY="1426.0" prefHeight="25.0" prefWidth="172.0" styleClass="edit-remove-label" text="Accept or remove Request" />
+                    <Label layoutX="234.0" layoutY="1427.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Request ID" />
+                    <Button layoutX="484.0" layoutY="1427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Accept!" />
+                    <TextField layoutX="364.0" layoutY="1427.0" prefHeight="25.0" prefWidth="108.0" promptText="request ID" styleClass="textField" />
+                    <Button layoutX="592.0" layoutY="1427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
                 </Pane>
 
             </ScrollPane>
@@ -98,9 +103,49 @@
         <Tab text="logs">
             <ScrollPane>
                 <Pane prefHeight="501.0" prefWidth="891.0">
-                    <TableView layoutX="30.0" layoutY="25.0" prefHeight="450.0" prefWidth="837.0"/>
+                    <TableView layoutX="30.0" layoutY="25.0" prefHeight="450.0" prefWidth="837.0" />
                 </Pane>
             </ScrollPane>
+        </Tab>
+        <Tab text="discount">
+            <ScrollPane>
+                <Pane prefHeight="1100.0" prefWidth="884.0">
+                    <TableView layoutX="14.0" layoutY="15.0" prefHeight="386.0" prefWidth="870.0" />
+                    <Label layoutX="26.0" layoutY="409.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="Edit Discount" />
+                    <Label layoutX="26.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="Discount ID" />
+                    <Label layoutX="149.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="Discount field" />
+                    <Label layoutX="272.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="new value" />
+                    <TextField layoutX="26.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="DiscountID" styleClass="textField" />
+                    <TextField layoutX="149.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="Discountfield" styleClass="textField" />
+                    <TextField layoutX="272.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="new value" styleClass="textField" />
+                    <Button layoutX="388.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
+                    <Label layoutX="547.0" layoutY="409.0" prefHeight="25.0" prefWidth="131.0" styleClass="edit-remove-label" text="Remove discount" />
+                    <Label layoutX="571.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="Discount ID" />
+                    <TextField layoutX="571.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="DIscountID" styleClass="textField" />
+                    <Button layoutX="388.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
+                    <Button layoutX="693.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
+                    <Label layoutX="26.0" layoutY="540.0" prefHeight="25.0" prefWidth="122.0" styleClass="edit-remove-label" text="Create DIscount" />
+                    <Label layoutX="27.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="DIsoucnt ID" />
+                    <Label layoutX="150.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Begining time" />
+                    <Label layoutX="273.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Ending time" />
+                    <TextField layoutX="27.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="Discount ID" styleClass="textField" />
+                    <Button layoutX="693.0" layoutY="616.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
+                    <Label layoutX="396.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Amount" />
+                    <Label layoutX="518.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Repeat time" />
+                    <TextField layoutX="396.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="amount" styleClass="textField" />
+                    <TextField layoutX="519.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="repeat " styleClass="textField" />
+                    <Label layoutX="28.0" layoutY="665.0" prefHeight="25.0" prefWidth="139.0" styleClass="edit-remove-label" text="Discounts requests" />
+                    <TableView layoutX="14.0" layoutY="707.0" prefHeight="298.0" prefWidth="869.0" />
+                    <Label layoutX="26.0" layoutY="1018.0" prefHeight="25.0" prefWidth="172.0" styleClass="edit-remove-label" text="Accept or remove Request" />
+                    <Label layoutX="234.0" layoutY="1019.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Request ID" />
+                    <Button layoutX="484.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Accept!" />
+                    <TextField layoutX="364.0" layoutY="1019.0" prefHeight="25.0" prefWidth="108.0" promptText="request ID" styleClass="textField" />
+                    <Button layoutX="592.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
+               <DatePicker layoutX="148.0" layoutY="617.0" prefHeight="25.0" prefWidth="109.0" styleClass="textField" />
+               <DatePicker layoutX="271.0" layoutY="617.0" prefHeight="25.0" prefWidth="109.0" styleClass="textField" />
+                </Pane>
+            </ScrollPane>
+
         </Tab>
     </JFXTabPane>
 
