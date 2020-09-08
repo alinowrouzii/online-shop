@@ -1,11 +1,15 @@
 package controller;
 
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-public class UserAccountController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class UserAccountController implements Initializable {
     public Button profileButton;
     public Button logsButton;
     public Button wallet;
@@ -17,4 +21,9 @@ public class UserAccountController {
     public TextField phoneNumTextField;
     public Button submit;
     public Button chanePass;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }
