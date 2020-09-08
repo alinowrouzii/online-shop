@@ -29,7 +29,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class UserAccountController implements Initializable {
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -50,9 +49,7 @@ public class UserAccountController implements Initializable {
     public ImageView profileImageView;
 
 
-
     public void changeProfilePicture(MouseEvent mouseEvent) {
-
 
         Stage stage = (Stage)profileImageView.getScene().getWindow();
         FileChooser fileChooser = new FileChooser();
@@ -73,11 +70,6 @@ public class UserAccountController implements Initializable {
         }
 
         profileImageView.setImage(image);
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
     }
 
     @Override
