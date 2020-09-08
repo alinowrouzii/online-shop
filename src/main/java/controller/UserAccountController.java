@@ -5,11 +5,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import model.ShoppingSystem;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class UserAccountController implements Initializable {
+    public ShoppingSystem shoppingSystem;
     public Button profileButton;
     public Button logsButton;
     public Button wallet;
@@ -24,6 +26,6 @@ public class UserAccountController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        shoppingSystem=SystemInitializer.getShoppingSystem();
     }
 }

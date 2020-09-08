@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.ShoppingSystem;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,6 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SignUpController implements Initializable {
+    public ShoppingSystem shoppingSystem;
     public TextField firstNameTextField;
     public TextField emailTextField;
     public TextField lastNameTextField;
@@ -53,6 +55,6 @@ public class SignUpController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        shoppingSystem=SystemInitializer.getShoppingSystem();
     }
 }

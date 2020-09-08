@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.ShoppingSystem;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,6 +24,7 @@ public class LoginPageController implements Initializable {
     public TextField userNameTextField;
     public Label wrongInformation;
     public Button signUpBtn;
+    public ShoppingSystem shoppingSystem;
 
     @FXML
     public void login(ActionEvent actionEvent) {
@@ -56,6 +58,6 @@ public class LoginPageController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        shoppingSystem=SystemInitializer.getShoppingSystem();
     }
 }
