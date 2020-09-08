@@ -201,3 +201,21 @@
 .products-page-tab .tab-header-background {
     -fx-background-color: #7dcade;
 }
+
+.sign-out-button {
+    -fx-background-color: RED;
+    -fx-border-radius:20px;
+}
+
+.sign-out-button:hover{
+    -fx-background-color: #ff836d;
+
+}
+.profile-button{
+    -fx-background-color: #3ac0ff;
+    -fx-border-radius:20px;
+}
+
+.profile-button:hover{
+    -fx-background-color: #45ceff;
+}

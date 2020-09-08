@@ -1,15 +1,22 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import org.controlsfx.control.RangeSlider;
 import view.ProductBox;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Random;
@@ -17,6 +24,7 @@ import java.util.ResourceBundle;
 
 public class ProductsPage implements Initializable {
     public GridPane productsPane;
+    public Button loginButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -36,5 +44,22 @@ public class ProductsPage implements Initializable {
             });
         }
 
+    }
+
+    public void loginButtonClicked(ActionEvent actionEvent) {
+        Stage stage;
+        Parent root = null;
+        stage = (Stage) loginButton.getScene().getWindow();
+        try {
+            root = FXMLLoader.load(new File("src/main/java/view/signUpPage.fxml").toURI().toURL());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(root != null){
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Sign up");
+            stage.show();
+        }
     }
 }

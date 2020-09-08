@@ -2,3 +2,75 @@
     --fxbackground-color: green;
     -fx-border-radius: 0px;
 }
+
+
+.profilePic:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+    -fx-cursor: hand;
+
+}
+
+
+
+
+.id-label{
+    -fx-background-color: #000000;
+    -fx-text-fill:WHITE;
+    -fx-background-radius:20px;
+    -fx-padding: 0 0 0 20px ;
+}
+
+.submitBtn {
+    -fx-background-radius:20px;
+    -fx-text-fill:WHITE;
+    -fx-background-color: #10a6a8;
+}
+.submitBtn:hover {
+    -fx-background-color: #19cbb6;
+
+}
+
+.textField{
+    -fx-padding: 0px 10px 3px 10px;
+    -fx-background-radius: 5, 5, 5, 0;
+    -fx-background-color: linear-gradient(#e9faff, #e2e6ff);
+    -fx-padding:4px;
+}
+
+.wrong-info{
+    -fx-text-fill:red;
+    -fx-font-weight: bold;
+}
+
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.table > .viewport {
+    -fx-background-color: transparent;
+}
+
+.table {
+    -fx-background-color: transparent;
+}
+
+.edit-remove-label{
+    -fx-background-color: #cc57bb;
+    -fx-text-fill:WHITE;
+    -fx-background-radius:20px;
+    -fx-padding: 0 0 0 20px ;
+}
+
+.product-fields-label{
+    -fx-background-color: #0a4b89;
+    -fx-text-fill:WHITE;
+    -fx-background-radius:20px;
+    -fx-padding: 0 0 0 6px ;
+
+}

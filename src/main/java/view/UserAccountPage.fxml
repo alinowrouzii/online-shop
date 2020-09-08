@@ -1,33 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.image.ImageView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
-<Pane xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.UserAccountController"
-      prefHeight="400.0" prefWidth="600.0"
-      stylesheets="@/styles/account.css"
-        styleClass="main">
-    <Button fx:id="profileButton" text="Your Profile" prefHeight="37.0" prefWidth="250.0" styleClass="btnMenu"/>
-    <Button fx:id="logsButton" text="Your Logs" prefHeight="37.0" prefWidth="250.0" layoutX="0" layoutY="37" styleClass="btnMenu"/>
-    <Button fx:id="wallet" text="Your Wallet" prefHeight="37.0" prefWidth="250.0" layoutY="74" styleClass="btnMenu" />
-    <ImageView fx:id="profilePicture" fitHeight="180.0" fitWidth="180.0" layoutX="320.0" layoutY="20.0" styleClass="profilePic" >
-        <image>
-            <Image url="@../../resources/icons/cart.png">
-            </Image>
-        </image>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/account.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserAccountController">
+    <ImageView fitHeight="600.0" fitWidth="1000.0">
+        <Image url="@../../resources/icons/sample_pic_3.jpg">
+        </Image>
     </ImageView>
-    <Label fx:id="usernameLabel" text="Username" styleClass="username" layoutX="320.0" layoutY="200.0"/>
-    <Label fx:id="typeLabel" text="type" styleClass="type" layoutY="220" layoutX="320"/>
-    <TextField fx:id="fullNameTextField" layoutX="550.0" layoutY="50.0" promptText="FullName" styleClass="textField"/>
-    <TextField fx:id="emailTextField" layoutX="550.0" layoutY="110.0" promptText="Email" styleClass="textField"/>
-    <TextField fx:id="phoneNumTextField" layoutX="550.0" layoutY="170.0" promptText="Phone Number" styleClass="textField"/>
-    <Button fx:id="submit" styleClass="submitBtn" layoutY="170.0" layoutX="750.0" text="submit changes" />
-    <Button fx:id="chanePass" styleClass="submitBtn" layoutY="110.0" layoutX="750.0" text="change password" />
+    <JFXTabPane layoutX="42.0" layoutY="37.0" prefHeight="539.0" prefWidth="900.0">
+        <Tab text="my profile">
+            <Pane>
+                <Label fx:id="usernameLabel" layoutX="391.0" layoutY="101.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="First name" />
+                <TextField fx:id="fullNameTextField" layoutX="533.0" layoutY="143.0" promptText="last name" styleClass="textField" />
+                <TextField layoutX="533.0" layoutY="100.0" promptText="first name" styleClass="textField" />
+
+                <TextField fx:id="emailTextField" layoutX="533.0" layoutY="186.0" promptText="Email" styleClass="textField" />
+                <TextField fx:id="phoneNumTextField" layoutX="533.0" layoutY="229.0" promptText="Phone Number" styleClass="textField" />
+
+                <Button fx:id="submit" layoutX="739.0" layoutY="224.0" prefHeight="26.0" prefWidth="116.0" styleClass="submitBtn" text="submit changes" />
+                <Button fx:id="chanePass" layoutX="743.0" layoutY="398.0" prefHeight="26.0" prefWidth="108.0" styleClass="submitBtn" text="change password" />
+                <ImageView fx:id="profileImageView" fitHeight="159.0" fitWidth="167.0" layoutX="53.0" layoutY="33.0" onMouseClicked="#changeProfilePicture" styleClass="profilePic">
+                    <Image url="@../../resources/icons/prof_temp.png" />
+                </ImageView>
+                <Label fx:id="idLabel" layoutX="58.0" layoutY="228.0" prefHeight="32.0" prefWidth="162.0" styleClass="id-label" text="ID: " />
+                <Label fx:id="balanceLabel" layoutX="58.0" layoutY="276.0" prefHeight="32.0" prefWidth="162.0" styleClass="id-label" text="Balance: " />
+                <Label layoutX="391.0" layoutY="144.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="last name" />
+            <Label layoutX="391.0" layoutY="187.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="Email" />
+            <Label layoutX="391.0" layoutY="230.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="Phone " />
+            <Label layoutX="360.0" layoutY="328.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="Current password" />
+            <Label layoutX="360.0" layoutY="365.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="new password" />
+            <Label layoutX="360.0" layoutY="402.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="confirm  password" />
+            <PasswordField layoutX="533.0" layoutY="327.0" promptText="your password" styleClass="textField" />
+            <PasswordField layoutX="533.0" layoutY="364.0" promptText="new password" styleClass="textField" />
+            <PasswordField layoutX="533.0" layoutY="401.0" promptText="confirm password" styleClass="textField" />
+            <Label layoutX="360.0" layoutY="292.0" prefHeight="23.0" prefWidth="125.0" styleClass="id-label" text="change password" />
+            <Label layoutX="687.0" layoutY="331.0" prefHeight="17.0" prefWidth="117.0" styleClass="wrong-info" text="Wrong password" />
+            <Label layoutX="562.0" layoutY="434.0" prefHeight="17.0" prefWidth="150.0" styleClass="wrong-info" text="Password not match!" />
+            </Pane>
+
+        </Tab>
+        <Tab text="logs">
+            <ScrollPane>
+            <content>
+               <Pane prefHeight="501.0" prefWidth="891.0">
+                  <children>
+                     <TableView layoutX="30.0" layoutY="25.0" prefHeight="450.0" prefWidth="837.0">
+                       <columns>
+                         <TableColumn prefWidth="75.0" text="C1" />
+                         <TableColumn prefWidth="75.0" text="C2" />
+                       </columns>
+                     </TableView>
+                  </children>
+               </Pane>
+            </content></ScrollPane>
+        </Tab>
+    </JFXTabPane>
+
 </Pane>

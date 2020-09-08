@@ -13,59 +13,55 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/login.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
-   <children>
-       <ImageView fitHeight="600.0" fitWidth="1000.0">
-          <image>
-              <Image url="@../../resources/icons/sign_up_background.png">
-        </Image>
-          </image>
-       </ImageView>
-       <ImageView layoutX="570.0" layoutY="37.0">
-          <image>
-              <Image url="@../../resources/icons/shop_logo.png" />
-          </image>
-       </ImageView>
-       <JFXTabPane fx:id="tabPane" layoutX="42.0" layoutY="37.0" prefHeight="539.0" prefWidth="419.0" tabClosingPolicy="UNAVAILABLE" styleClass="sign-up-page-tab">
-           <tabs>
-               <Tab text="Sign as User">
-                   <content>
-                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                               <Pane layoutX="14.0" layoutY="-1.0" prefHeight="511.0" prefWidth="419.0">
-                                   <children>
-                                       <TextField fx:id="firstNameTextField" layoutX="51.0" layoutY="85.0" prefHeight="37.0" prefWidth="151.0" promptText="your first name" />
-                                       <TextField fx:id="lastNameTextField" layoutX="219.0" layoutY="85.0" prefHeight="37.0" prefWidth="146.0" promptText="your last name" />
-                                       <TextField fx:id="emailTextField" layoutX="51.0" layoutY="160.0" prefHeight="37.0" prefWidth="317.0" promptText="your E-mail address" />
-                                       <TextField fx:id="userNameTextField" layoutX="51.0" layoutY="235.0" prefHeight="37.0" prefWidth="317.0" promptText="your user name" />
-                                       <PasswordField fx:id="passwordTextField" layoutX="51.0" layoutY="307.0" prefHeight="37.0" prefWidth="317.0" promptText="your password" />
-                                       <Button fx:id="registerBtn" layoutX="51.0" layoutY="380.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="317.0" style="-fx-font-size: 21;" styleClass="btnSignUp" text="Register now!" />
-                                       <CheckBox layoutX="52.0" layoutY="351.0" mnemonicParsing="false" text="Accept terms of services" />
-                                       <Label layoutX="51.0" layoutY="60.0" text="First name" />
-                                       <Label layoutX="211.0" layoutY="60.0" text="Last name" />
-                                       <Label layoutX="51.0" layoutY="136.0" text="Email address" />
-                                       <Label layoutX="51.0" layoutY="211.0" text="User name" />
-                                       <Label layoutX="54.0" layoutY="285.0" text="Password" />
-                                   </children>
-                        </Pane>
-                           </children>
-                       </AnchorPane>
-                   </content>
-               </Tab>
-               <Tab text="Sign as Seller">
-                   <content>
-                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                   </content>
-               </Tab>
-           </tabs>
-       </JFXTabPane>
-       <Label alignment="center" layoutX="613.0" layoutY="317.0" prefHeight="49.0" prefWidth="277.0" style="-fx-text-fill: black; -fx-font-size: 25;" text="Enjoy Shopping!">
-           <font>
-               <Font size="44.0" />
-           </font>
-       </Label>
-       <Button fx:id="loginBtn" layoutX="671.0" layoutY="427.0" mnemonicParsing="false" onAction="#loginClicked" prefHeight="55.0" prefWidth="173.0" style="-fx-font-size: 22;" styleClass="btnLogin" text="Login now!" />
-      <Button layoutX="7.0" layoutY="9.0" mnemonicParsing="false" text="Back" onAction="#backClicked"/>
-   </children>
+<Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/login.css" xmlns="http://javafx.com/javafx/8.0.172-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
 
+    <ImageView fitHeight="600.0" fitWidth="1000.0">
+        <Image url="@../../resources/icons/sign_up_background.png">
+        </Image>
+    </ImageView>
+    <ImageView layoutX="570.0" layoutY="37.0">
+        <Image url="@../../resources/icons/shop_logo.png"/>
+    </ImageView>
+    <JFXTabPane fx:id="tabPane" layoutX="42.0" layoutY="37.0" prefHeight="539.0" prefWidth="419.0"
+                tabClosingPolicy="UNAVAILABLE" styleClass="sign-up-page-tab">
+        <Tab text="Sign as User">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Pane layoutX="14.0" layoutY="-1.0" prefHeight="511.0" prefWidth="419.0">
+                    <TextField fx:id="firstNameTextField" layoutX="51.0" layoutY="85.0"
+                               prefHeight="37.0" prefWidth="151.0" promptText="your first name"/>
+                    <TextField fx:id="lastNameTextField" layoutX="219.0" layoutY="85.0"
+                               prefHeight="37.0" prefWidth="146.0" promptText="your last name"/>
+                    <TextField fx:id="emailTextField" layoutX="51.0" layoutY="160.0" prefHeight="37.0"
+                               prefWidth="317.0" promptText="your E-mail address"/>
+                    <TextField fx:id="userNameTextField" layoutX="51.0" layoutY="235.0"
+                               prefHeight="37.0" prefWidth="317.0" promptText="your user name"/>
+                    <PasswordField fx:id="passwordTextField" layoutX="51.0" layoutY="307.0"
+                                   prefHeight="37.0" prefWidth="317.0" promptText="your password"/>
+                    <Button fx:id="registerBtn" layoutX="51.0" layoutY="380.0" mnemonicParsing="false"
+                            prefHeight="37.0" prefWidth="317.0" style="-fx-font-size: 21;"
+                            styleClass="btnSignUp" text="Register now!"/>
+                    <CheckBox layoutX="52.0" layoutY="351.0" mnemonicParsing="false"
+                              text="Accept terms of services"/>
+                    <Label layoutX="51.0" layoutY="60.0" text="First name"/>
+                    <Label layoutX="211.0" layoutY="60.0" text="Last name"/>
+                    <Label layoutX="51.0" layoutY="136.0" text="Email address"/>
+                    <Label layoutX="51.0" layoutY="211.0" text="User name"/>
+                    <Label layoutX="54.0" layoutY="285.0" text="Password"/>
+                </Pane>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Sign as Seller">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </Tab>
+    </JFXTabPane>
+    <Label alignment="center" layoutX="613.0" layoutY="317.0" prefHeight="49.0" prefWidth="277.0"
+           style="-fx-text-fill: black; -fx-font-size: 25;" text="Enjoy Shopping!">
+        <font>
+            <Font size="44.0"/>
+        </font>
+    </Label>
+    <Button fx:id="loginBtn" layoutX="671.0" layoutY="427.0" mnemonicParsing="false" onAction="#loginClicked"
+            prefHeight="55.0" prefWidth="173.0" style="-fx-font-size: 22;" styleClass="btnLogin" text="Login now!"/>
+    <Button layoutX="7.0" layoutY="9.0" mnemonicParsing="false" text="Back" onAction="#backClicked"/>
 </Pane>

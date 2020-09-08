@@ -16,110 +16,94 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/login.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductsPage">
-    <children>
     <ImageView fitHeight="600.0" fitWidth="1000.0">
-        <image>
-            <Image url="@../../resources/icons/products_background.jpg">
-            </Image>
-        </image>
+        <Image url="@../../resources/icons/products_background.jpg">
+        </Image>
     </ImageView>
     <TextField layoutX="713.0" layoutY="39.0" prefHeight="32.0" prefWidth="181.0" promptText="Search" />
     <JFXButton layoutX="894.0" layoutY="16.0" prefHeight="45.0" prefWidth="58.0">
         <graphic>
 
             <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../resources/icons/cart.png" />
-               </image>
+                <Image url="@../../resources/icons/cart.png" />
             </ImageView>
         </graphic>
     </JFXButton>
-        <Pane layoutX="14.0" layoutY="100.0" prefHeight="469.0" prefWidth="742.0">
-         <children>
-             <ScrollPane layoutX="-1.0" layoutY="-3.0" prefHeight="469.0" prefWidth="742.0">
-                 <GridPane fx:id="productsPane" gridLinesVisible="true" prefHeight="900.0" prefWidth="740.0">
-                     <columnConstraints>
-                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <Pane layoutX="14.0" layoutY="100.0" prefHeight="469.0" prefWidth="742.0">
+        <ScrollPane layoutX="-1.0" layoutY="-3.0" prefHeight="469.0" prefWidth="742.0">
+            <GridPane fx:id="productsPane" gridLinesVisible="true" prefHeight="900.0" prefWidth="740.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 
-                     </columnConstraints>
-                     <rowConstraints>
-                         <RowConstraints minHeight="200.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                         <RowConstraints minHeight="200.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                         <RowConstraints minHeight="200.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                     </rowConstraints>
-                 </GridPane>
-             </ScrollPane>
-         </children></Pane>
-      <Button layoutX="77.0" layoutY="571.0" mnemonicParsing="false" styleClass="btnSignUp" text="next" />
-      <Button layoutX="26.0" layoutY="571.0" mnemonicParsing="false" styleClass="btnSignUp" text="back" />
-      <ScrollPane layoutX="769.0" layoutY="100.0" prefHeight="469.0" prefWidth="217.0">
-         <content>
-<!--            <Pane prefHeight="467.0" prefWidth="212.0">-->
-<!--               <children>-->
-<!--                  <Label layoutX="19.0" layoutY="1.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill:#f80e0e; -fx-font-size:18;" text="Filtering:" />-->
-<!--                  <Label alignment="center" layoutX="19.0" layoutY="27.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by price:" />-->
-<!--                  <Label alignment="center" layoutX="19.0" layoutY="67.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="min" />-->
-<!--                  <Label alignment="center" layoutX="19.0" layoutY="101.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="max" />-->
-<!--                  <TextField layoutX="69.0" layoutY="64.0" prefHeight="32.0" prefWidth="98.0" promptText="min price" />-->
-<!--                  <TextField layoutX="69.0" layoutY="101.0" prefHeight="32.0" prefWidth="98.0" promptText="max price" />-->
-<!--                  <Label alignment="center" layoutX="19.0" layoutY="146.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by product name:" />-->
-<!--                  <Label alignment="center" layoutX="14.0" layoutY="183.0" prefHeight="26.0" prefWidth="49.0" style="fx-text-weight:bold;" text="name" />-->
-<!--                  <TextField layoutX="69.0" layoutY="180.0" prefHeight="32.0" prefWidth="98.0" promptText="product name" />-->
-<!--                  <Label alignment="center" layoutX="19.0" layoutY="226.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by category name:" />-->
-<!--                  <TextField layoutX="69.0" layoutY="259.0" prefHeight="32.0" prefWidth="98.0" promptText="category name name" />-->
-<!--                  <Label alignment="center" layoutX="19.0" layoutY="298.0" prefHeight="26.0" prefWidth="146.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="product must be Exist" />-->
-<!--                  <CheckBox layoutX="167.0" layoutY="301.0" mnemonicParsing="false" />-->
-<!--                  <Button layoutX="34.0" layoutY="331.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" styleClass="btnLogin" text="Filter!" />-->
-<!--               </children>-->
-<!--            </Pane>-->
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="200.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="200.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="200.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+            </GridPane>
+        </ScrollPane>
+    </Pane>
+    <Button layoutX="77.0" layoutY="571.0" mnemonicParsing="false" styleClass="btnSignUp" text="next" />
+    <Button layoutX="26.0" layoutY="571.0" mnemonicParsing="false" styleClass="btnSignUp" text="back" />
+    <ScrollPane layoutX="769.0" layoutY="100.0" prefHeight="469.0" prefWidth="217.0">
+        <!--            <Pane prefHeight="467.0" prefWidth="212.0">-->
+        <!--               <children>-->
+        <!--                  <Label layoutX="19.0" layoutY="1.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill:#f80e0e; -fx-font-size:18;" text="Filtering:" />-->
+        <!--                  <Label alignment="center" layoutX="19.0" layoutY="27.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by price:" />-->
+        <!--                  <Label alignment="center" layoutX="19.0" layoutY="67.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="min" />-->
+        <!--                  <Label alignment="center" layoutX="19.0" layoutY="101.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="max" />-->
+        <!--                  <TextField layoutX="69.0" layoutY="64.0" prefHeight="32.0" prefWidth="98.0" promptText="min price" />-->
+        <!--                  <TextField layoutX="69.0" layoutY="101.0" prefHeight="32.0" prefWidth="98.0" promptText="max price" />-->
+        <!--                  <Label alignment="center" layoutX="19.0" layoutY="146.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by product name:" />-->
+        <!--                  <Label alignment="center" layoutX="14.0" layoutY="183.0" prefHeight="26.0" prefWidth="49.0" style="fx-text-weight:bold;" text="name" />-->
+        <!--                  <TextField layoutX="69.0" layoutY="180.0" prefHeight="32.0" prefWidth="98.0" promptText="product name" />-->
+        <!--                  <Label alignment="center" layoutX="19.0" layoutY="226.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by category name:" />-->
+        <!--                  <TextField layoutX="69.0" layoutY="259.0" prefHeight="32.0" prefWidth="98.0" promptText="category name name" />-->
+        <!--                  <Label alignment="center" layoutX="19.0" layoutY="298.0" prefHeight="26.0" prefWidth="146.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="product must be Exist" />-->
+        <!--                  <CheckBox layoutX="167.0" layoutY="301.0" mnemonicParsing="false" />-->
+        <!--                  <Button layoutX="34.0" layoutY="331.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" styleClass="btnLogin" text="Filter!" />-->
+        <!--               </children>-->
+        <!--            </Pane>-->
 
 
-             <JFXTabPane fx:id="myTab" prefHeight="465.0" prefWidth="215.0" styleClass="products-page-tab">
-                 <tabs>
-                     <Tab text="Filtering">
-                         <content>
-                             <Pane prefHeight="467.0" prefWidth="212.0">
-                                <children>
-                                   <Label alignment="center" layoutX="19.0" layoutY="27.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by price:" />
-                                   <Label alignment="center" layoutX="19.0" layoutY="67.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="min" />
-                                   <Label alignment="center" layoutX="19.0" layoutY="101.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="max" />
-                                   <TextField layoutX="69.0" layoutY="64.0" prefHeight="32.0" prefWidth="98.0" promptText="min price" />
-                                   <TextField layoutX="69.0" layoutY="101.0" prefHeight="32.0" prefWidth="98.0" promptText="max price" />
-                                   <Label alignment="center" layoutX="19.0" layoutY="146.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by product name:" />
-                                   <Label alignment="center" layoutX="14.0" layoutY="183.0" prefHeight="26.0" prefWidth="49.0" style="fx-text-weight:bold;" text="name" />
-                                   <TextField layoutX="69.0" layoutY="180.0" prefHeight="32.0" prefWidth="98.0" promptText="product name" />
-                                   <Label alignment="center" layoutX="19.0" layoutY="226.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by category name:" />
-                                   <TextField layoutX="69.0" layoutY="259.0" prefHeight="32.0" prefWidth="98.0" promptText="category name name" />
-                                   <Label alignment="center" layoutX="19.0" layoutY="298.0" prefHeight="26.0" prefWidth="146.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="product must be Exist" />
-                                   <CheckBox layoutX="167.0" layoutY="301.0" mnemonicParsing="false" />
-                                   <Button layoutX="34.0" layoutY="331.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" styleClass="btnLogin" text="Filter!" />
-                                </children>
-                             </Pane>
-                         </content>
-                     </Tab>
-                     <Tab text="Sorting">
-                         <content>
-                             <Pane prefHeight="467.0" prefWidth="212.0">
-                           <children>
-                              <Label layoutX="38.0" layoutY="56.0" prefHeight="26.0" prefWidth="69.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by price" />
-                              <Label layoutX="38.0" layoutY="101.0" prefHeight="26.0" prefWidth="69.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by rating" />
-                              <Label layoutX="38.0" layoutY="147.0" prefHeight="26.0" prefWidth="69.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by name" />
-                              <Button layoutX="38.0" layoutY="204.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" styleClass="btnLogin" text="Sort!" />
-                              <CheckBox layoutX="129.0" layoutY="59.0" mnemonicParsing="false" />
-                              <CheckBox layoutX="129.0" layoutY="104.0" mnemonicParsing="false" />
-                              <CheckBox layoutX="129.0" layoutY="150.0" mnemonicParsing="false" />
-                           </children>
-                             </Pane>
-                         </content>
-                     </Tab>
+        <JFXTabPane fx:id="myTab" prefHeight="465.0" prefWidth="215.0" styleClass="products-page-tab">
+            <Tab text="Filtering">
+                <Pane prefHeight="467.0" prefWidth="212.0">
+                    <Label alignment="center" layoutX="19.0" layoutY="27.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by price:" />
+                    <Label alignment="center" layoutX="19.0" layoutY="67.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="min" />
+                    <Label alignment="center" layoutX="19.0" layoutY="101.0" prefHeight="26.0" prefWidth="32.0" style="fx-text-weight:bold;" text="max" />
+                    <TextField layoutX="69.0" layoutY="64.0" prefHeight="32.0" prefWidth="98.0" promptText="min price" />
+                    <TextField layoutX="69.0" layoutY="101.0" prefHeight="32.0" prefWidth="98.0" promptText="max price" />
+                    <Label alignment="center" layoutX="19.0" layoutY="146.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by product name:" />
+                    <Label alignment="center" layoutX="14.0" layoutY="183.0" prefHeight="26.0" prefWidth="49.0" style="fx-text-weight:bold;" text="name" />
+                    <TextField layoutX="69.0" layoutY="180.0" prefHeight="32.0" prefWidth="98.0" promptText="product name" />
+                    <Label alignment="center" layoutX="19.0" layoutY="226.0" prefHeight="26.0" prefWidth="174.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by category name:" />
+                    <TextField layoutX="69.0" layoutY="259.0" prefHeight="32.0" prefWidth="98.0" promptText="category name name" />
+                    <Label alignment="center" layoutX="19.0" layoutY="298.0" prefHeight="26.0" prefWidth="146.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="product must be Exist" />
+                    <CheckBox layoutX="167.0" layoutY="301.0" mnemonicParsing="false" />
+                    <Button layoutX="34.0" layoutY="331.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" styleClass="btnLogin" text="Filter!" />
+                </Pane>
+            </Tab>
+            <Tab text="Sorting">
+                <Pane prefHeight="467.0" prefWidth="212.0">
+                    <Label layoutX="38.0" layoutY="56.0" prefHeight="26.0" prefWidth="69.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by price" />
+                    <Label layoutX="38.0" layoutY="101.0" prefHeight="26.0" prefWidth="69.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by rating" />
+                    <Label layoutX="38.0" layoutY="147.0" prefHeight="26.0" prefWidth="69.0" style="-fx-text-fill: black; -fx-font-size: 15;" text="by name" />
+                    <Button layoutX="38.0" layoutY="204.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" styleClass="btnLogin" text="Sort!" />
+                    <CheckBox layoutX="129.0" layoutY="59.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="129.0" layoutY="104.0" mnemonicParsing="false" />
+                    <CheckBox layoutX="129.0" layoutY="150.0" mnemonicParsing="false" />
+                </Pane>
+            </Tab>
 
-                 </tabs>
-             </JFXTabPane>
-         </content>
-      </ScrollPane>
-    
+        </JFXTabPane>
+    </ScrollPane>
+   <Button layoutX="100.0" layoutY="16.0" mnemonicParsing="false" styleClass="profile-button" text="your profile" />
+   <Button layoutX="25.0" layoutY="16.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="67.0" styleClass="sign-out-button" text="sign out" />
+   <Button fx:id="loginButton" layoutX="25.0" layoutY="59.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="114.0" text="Login or sign up" styleClass="btnSignUp" onAction="#loginButtonClicked"/>
 
-    </children>
+
 </Pane>
