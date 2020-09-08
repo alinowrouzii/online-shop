@@ -31,7 +31,7 @@
     </JFXButton>
     <Pane layoutX="14.0" layoutY="100.0" prefHeight="469.0" prefWidth="742.0">
         <ScrollPane layoutX="-1.0" layoutY="-3.0" prefHeight="469.0" prefWidth="742.0">
-            <GridPane fx:id="productsPane" gridLinesVisible="true" prefHeight="900.0" prefWidth="740.0">
+            <GridPane fx:id="productsPane" gridLinesVisible="true" prefHeight="1000.0" prefWidth="740.0">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

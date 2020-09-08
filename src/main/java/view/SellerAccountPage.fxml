@@ -28,8 +28,6 @@
 
                 <TextField fx:id="emailTextField" layoutX="533.0" layoutY="186.0" promptText="Email" styleClass="textField" />
                 <TextField fx:id="phoneNumTextField" layoutX="533.0" layoutY="229.0" promptText="Phone Number" styleClass="textField" />
-
-
                 <ImageView fx:id="profileImageView" fitHeight="159.0" fitWidth="167.0" layoutX="53.0" layoutY="33.0" onMouseClicked="#changeProfilePicture" styleClass="profilePic">
                     <Image url="@../../resources/icons/prof_temp.png" />
                 </ImageView>

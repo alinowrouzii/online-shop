@@ -51,11 +51,11 @@ public class MainMenuController implements Initializable {
         primaryStage.setScene(scene);
     }
 
-    public void productsButtonClicked(ActionEvent actionEvent) {
-        //TODO
-//        root = FXMLLoader.load(new File("src/main/java/view/LoginPage.fxml").toURI().toURL());
-//        scene = new Scene(root);
-//        primaryStage.setScene(scene);
+    public void productsButtonClicked(ActionEvent actionEvent) throws IOException {
+        primaryStage = (Stage) signUpButton.getScene().getWindow();
+        root = FXMLLoader.load(new File("src/main/java/view/ProductsPage.fxml").toURI().toURL());
+        scene = new Scene(root);
+        primaryStage.setScene(scene);
     }
 
     public void aboutButtonClicked(ActionEvent actionEvent) {

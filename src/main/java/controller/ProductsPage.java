@@ -31,12 +31,13 @@ public class ProductsPage implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        shoppingSystem=SystemInitializer.getShoppingSystem();
+        shoppingSystem = SystemInitializer.getShoppingSystem();
         for (int i=0 ;i<7 ; i++){
             ProductBox box = new ProductBox("product"+(i+1), 5);
             box.setImage(new Image(new File("src/main/resources/icons/product"+(i+13)+".png").toURI().toString()));
             Random random = new Random();
             box.setRating(i%5.12);
+            box.setPrice("Price: "+i%5.12+12000+"");
             productsPane.add(box,i%3,i/3);
             int finalI = i;
             box.setOnMouseClicked(new EventHandler<MouseEvent>() {
