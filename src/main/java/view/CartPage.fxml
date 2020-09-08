@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CartController">
+    <ImageView fitHeight="600.0" fitWidth="1000.0">
+        <Image url="@../../resources/icons/sample_pic_3.jpg">
+        </Image>
+    </ImageView>
+    <VBox fx:id="cartBox" layoutX="76.0" layoutY="50.0" prefHeight="494.0" prefWidth="813.0">
+        <HBox prefHeight="115.0" prefWidth="813.0"/>
+
+    </VBox>
+</Pane>
