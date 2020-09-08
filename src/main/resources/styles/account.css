@@ -74,3 +74,8 @@
     -fx-padding: 0 0 0 6px ;
 
 }
+
+
+.tab .tab-header-background {
+    -fx-background-color: transparent;
+}

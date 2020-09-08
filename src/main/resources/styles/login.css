@@ -194,12 +194,16 @@
 
 
 .sign-up-page-tab .tab-header-background {
-    -fx-background-color: #256dd3;
+    /*-fx-background-color: #256dd3;*/
+    -fx-background-color: transparent;
+
 }
 
 
 .products-page-tab .tab-header-background {
-    -fx-background-color: #7dcade;
+    /*-fx-background-color: #7dcade;*/
+    -fx-background-color: transparent;
+
 }
 
 .sign-out-button {
