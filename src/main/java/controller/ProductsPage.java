@@ -1,5 +1,6 @@
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -28,6 +29,7 @@ public class ProductsPage implements Initializable {
     public GridPane productsPane;
     public ShoppingSystem shoppingSystem;
     public Button loginButton;
+    public JFXButton cartButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -64,6 +66,23 @@ public class ProductsPage implements Initializable {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle("Sign up");
+            stage.show();
+        }
+    }
+
+    public void cartButtonClicked(MouseEvent mouseEvent) {
+        Stage stage;
+        Parent root = null;
+        stage = (Stage) loginButton.getScene().getWindow();
+        try {
+            root = FXMLLoader.load(new File("src/main/java/view/CartPage.fxml").toURI().toURL());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(root != null){
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Cart");
             stage.show();
         }
     }

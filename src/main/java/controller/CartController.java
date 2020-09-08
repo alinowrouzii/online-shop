@@ -3,8 +3,12 @@ package controller;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import model.Product;
 import model.ShoppingSystem;
 
@@ -16,6 +20,7 @@ import java.util.ResourceBundle;
 
 public class CartController implements Initializable {
     public VBox cartHBox;
+    public Button backButton;
     private ShoppingSystem shoppingSystem;
 
     @Override
@@ -56,4 +61,20 @@ public class CartController implements Initializable {
         }
     }
 
+    public void cartButtonClicked(MouseEvent mouseEvent) {
+        Stage stage;
+        Parent root = null;
+        stage = (Stage) backButton.getScene().getWindow();
+        try {
+            root = FXMLLoader.load(new File("src/main/java/view/ProductsPage.fxml").toURI().toURL());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(root != null){
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Sign up");
+            stage.show();
+        }
+    }
 }

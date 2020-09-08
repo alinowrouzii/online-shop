@@ -14,7 +14,7 @@
         <Image url="@../../resources/icons/sample_pic_3.jpg">
         </Image>
     </ImageView>
-   <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Back" />
+   <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Back" onMouseClicked="#cartButtonClicked" styleClass="back-btn"/>
     <ScrollPane layoutX="99.0" layoutY="134.0" prefHeight="403.0" prefWidth="802.0">
         <VBox fx:id="cartHBox" prefHeight="399.0" prefWidth="782.0" spacing="15">
             <HBox alignment="CENTER" prefHeight="59.0" prefWidth="795.0" spacing="20" style="-fx-padding: 0 10 0 20;">

@@ -96,3 +96,48 @@
 .up-down-btn:pressed{
     -fx-effect:none;
 }
+
+.back-btn{
+    -fx-background-color: #1e8cff;
+    -fx-text-fill:white;
+    -fx-border-radius:20px;
+}
+.back-btn:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(41, 53, 77, 0.8), 10, 0, 0, 0);
+}
+.back-btn:pressed{
+    -fx-effect: none;
+}
+
+.product-value-label {
+    -fx-effect: dropshadow(three-pass-box, rgba(41, 53, 77, 0.8), 10, 0, 0, 0);
+    -fx-font-family: 'Helvetica', Arial, sans-serif;
+    /*-fx-font-weight: bold;*/
+    -fx-font-size:19;
+
+}
+
+.add-to-cart-button {
+    -fx-border-radius:10px;
+    -fx-background-color: #de60ff;
+    -fx-text-fill:white;
+}
+.add-to-cart-button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(110, 48, 118, 0.8), 10, 0, 0, 0);
+}
+.add-to-cart-button:pressed {
+    -fx-effect:none;
+    -fx-background-color: #ff70f7;
+
+}
+
+.text-area{
+    -fx-background-color: transparent;
+}
+
+.hoverable:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(110, 48, 118, 0.8), 10, 0, 0, 0);
+}
+.hoverable:pressed {
+    -fx-effect: none;
+}

@@ -223,3 +223,18 @@
 .profile-button:hover{
     -fx-background-color: #45ceff;
 }
+
+.cart-icon:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(41, 53, 77, 0.8), 10, 0, 0, 0);
+}
+
+.back-btn{
+    -fx-background-color: #1e8cff;
+    -fx-border-radius:20px;
+}
+.back-btn:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(41, 53, 77, 0.8), 10, 0, 0, 0);
+}
+.back-btn:pressed{
+    -fx-effect: none;
+}

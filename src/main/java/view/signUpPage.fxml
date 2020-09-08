@@ -63,5 +63,5 @@
     </Label>
     <Button fx:id="loginBtn" layoutX="671.0" layoutY="427.0" mnemonicParsing="false" onAction="#loginClicked"
             prefHeight="55.0" prefWidth="173.0" style="-fx-font-size: 22;" styleClass="btnLogin" text="Login now!"/>
-    <Button layoutX="7.0" layoutY="9.0" mnemonicParsing="false" text="Back" onAction="#backClicked"/>
+    <Button layoutX="7.0" layoutY="9.0" mnemonicParsing="false" text="Back" onAction="#backClicked" styleClass="back-btn"/>
 </Pane>
