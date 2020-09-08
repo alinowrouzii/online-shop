@@ -16,7 +16,6 @@
                 <Label fx:id="usernameLabel" layoutX="391.0" layoutY="101.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="First name" />
                 <TextField fx:id="fullNameTextField" layoutX="533.0" layoutY="143.0" promptText="last name" styleClass="textField" />
                 <TextField layoutX="533.0" layoutY="100.0" promptText="first name" styleClass="textField" />
-
                 <TextField fx:id="emailTextField" layoutX="533.0" layoutY="186.0" promptText="Email" styleClass="textField" />
                 <TextField fx:id="phoneNumTextField" layoutX="533.0" layoutY="229.0" promptText="Phone Number" styleClass="textField" />
 
