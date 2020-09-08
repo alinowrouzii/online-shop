@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/account.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SellerAccountController">
+    <ImageView fitHeight="600.0" fitWidth="1000.0">
+        <Image url="@../../resources/icons/sample_pic_3.jpg">
+        </Image>
+    </ImageView>
+<!--    558-->
+    <JFXTabPane layoutX="42.0" layoutY="25.0" prefHeight="558.0" prefWidth="900.0">
+        <Tab text="my profile">
+            <Pane>
+                <Label fx:id="usernameLabel" layoutX="391.0" layoutY="101.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="First name" />
+                <TextField fx:id="fullNameTextField" layoutX="533.0" layoutY="143.0" promptText="last name" styleClass="textField" />
+                <TextField layoutX="533.0" layoutY="100.0" promptText="first name" styleClass="textField" />
+
+                <TextField fx:id="emailTextField" layoutX="533.0" layoutY="186.0" promptText="Email" styleClass="textField" />
+                <TextField fx:id="phoneNumTextField" layoutX="533.0" layoutY="229.0" promptText="Phone Number" styleClass="textField" />
+
+
+                <ImageView fx:id="profileImageView" fitHeight="159.0" fitWidth="167.0" layoutX="53.0" layoutY="33.0" onMouseClicked="#changeProfilePicture" styleClass="profilePic">
+                    <Image url="@../../resources/icons/prof_temp.png" />
+                </ImageView>
+                <Label fx:id="idLabel" layoutX="58.0" layoutY="228.0" prefHeight="32.0" prefWidth="162.0" styleClass="id-label" text="User ID: " />
+                <Label fx:id="balanceLabel" layoutX="58.0" layoutY="276.0" prefHeight="32.0" prefWidth="162.0" styleClass="id-label" text="Balance: " />
+                <Label layoutX="391.0" layoutY="144.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="last name" />
+                <Label layoutX="391.0" layoutY="187.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="Email" />
+                <Label layoutX="391.0" layoutY="230.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="Phone " />
+                <Label layoutX="360.0" layoutY="328.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="Current password" />
+                <Label layoutX="360.0" layoutY="365.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="new password" />
+                <Label layoutX="360.0" layoutY="402.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="confirm  password" />
+                <PasswordField layoutX="533.0" layoutY="327.0" promptText="your password" styleClass="textField" />
+                <PasswordField layoutX="533.0" layoutY="364.0" promptText="new password" styleClass="textField" />
+                <PasswordField layoutX="533.0" layoutY="401.0" promptText="confirm password" styleClass="textField" />
+                <Label layoutX="360.0" layoutY="292.0" prefHeight="23.0" prefWidth="125.0" styleClass="id-label" text="change password" />
+                <Label layoutX="687.0" layoutY="331.0" prefHeight="17.0" prefWidth="117.0" styleClass="wrong-info" text="Wrong password" />
+                <Label layoutX="562.0" layoutY="434.0" prefHeight="17.0" prefWidth="150.0" styleClass="wrong-info" text="Password not match!" />
+
+                <Button fx:id="submit" layoutX="739.0" layoutY="224.0" prefHeight="26.0" prefWidth="116.0" styleClass="submitBtn" text="submit changes" />
+                <Button fx:id="chanePass" layoutX="743.0" layoutY="398.0" prefHeight="26.0" prefWidth="108.0" styleClass="submitBtn" text="change password" />
+            </Pane>
+
+        </Tab>
+        <Tab text="products">
+            <ScrollPane>
+                <Pane prefHeight="1019.0" prefWidth="884.0">
+                    <TableView fx:id="productsView" layoutX="14.0" layoutY="15.0" prefHeight="386.0" prefWidth="870.0" />
+                    <Label layoutX="26.0" layoutY="409.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="Edit Product" />
+                    <Label layoutX="26.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="Product ID" />
+                    <Label layoutX="149.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="Product field" />
+                    <Label layoutX="272.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="new value" />
+                    <TextField layoutX="26.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="product ID" styleClass="textField" />
+                    <TextField layoutX="149.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="product field" styleClass="textField" />
+                    <TextField layoutX="272.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="new value" styleClass="textField" />
+                    <Button layoutX="388.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
+                    <Label layoutX="547.0" layoutY="409.0" prefHeight="25.0" prefWidth="131.0" styleClass="edit-remove-label" text="Remove product" />
+                    <Label layoutX="571.0" layoutY="446.0" prefHeight="25.0" prefWidth="107.0" styleClass="id-label" text="Product ID" />
+                    <TextField layoutX="571.0" layoutY="484.0" prefHeight="25.0" prefWidth="108.0" promptText="product ID" styleClass="textField" />
+                    <Button layoutX="388.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
+                    <Button layoutX="693.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
+               <Label layoutX="26.0" layoutY="540.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="Add Product" />
+               <Label layoutX="27.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product ID" />
+               <Label layoutX="150.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product Name" />
+               <Label layoutX="273.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product price" />
+               <TextField layoutX="27.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product ID" styleClass="textField" />
+               <TextField layoutX="150.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product field" styleClass="textField" />
+               <TextField layoutX="273.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="new value" styleClass="textField" />
+               <Button layoutX="774.0" layoutY="616.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Submit!" />
+               <Label layoutX="396.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Product category" />
+               <Label layoutX="518.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="product amount" />
+               <TextField layoutX="396.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="product field" styleClass="textField" />
+               <TextField layoutX="519.0" layoutY="616.0" prefHeight="25.0" prefWidth="108.0" promptText="new value" styleClass="textField" />
+               <Label layoutX="640.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="product brand" />
+               <TextField layoutX="641.0" layoutY="615.0" prefHeight="25.0" prefWidth="108.0" promptText="new value" styleClass="textField" />
+               <Label layoutX="28.0" layoutY="665.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="your requests" />
+               <TableView layoutX="14.0" layoutY="707.0" prefHeight="298.0" prefWidth="869.0">
+                 <columns>
+                   <TableColumn prefWidth="75.0" text="C1" />
+                   <TableColumn prefWidth="75.0" text="C2" />
+                 </columns>
+               </TableView>
+                </Pane>
+
+            </ScrollPane>
+
+        </Tab>
+    </JFXTabPane>
+
+</Pane>
