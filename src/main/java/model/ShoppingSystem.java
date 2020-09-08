@@ -7,6 +7,7 @@ import javassist.tools.rmi.ObjectNotFoundException;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -81,14 +82,14 @@ public class ShoppingSystem {
     public void addProductToCart(String productId){
         for(Product product:shop.getProductsManager().getProducts()){
             if(product.getProductId().equals(productId) && product.isExists()){
-                cartProducts.addProduct(product) ;
+                cartProducts.addProduct(product,5) ;
                 return ;
             }
         }
     }
 
     public void removeProductFromCart(String productId){
-        cartProducts.removeProduct(productId) ;
+        cartProducts.removeProduct(productId,1) ;
     }
 
     public ArrayList<Categoory> getCategories() {
@@ -131,7 +132,7 @@ public class ShoppingSystem {
         this.filteredProducts = Search.searchByExisting(shop.getProductsManager().getProducts()) ;
     }
 
-    public ArrayList<Product> getCartProduct(){
+    public HashMap<Product,Integer> getCartProduct(){
         return cartProducts.getProducts() ;
     }
 

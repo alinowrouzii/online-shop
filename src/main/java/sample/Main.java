@@ -27,7 +27,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
 //        Parent root = FXMLLoader.load(new File("src/main/java/view/ManagerAccountPage.fxml").toURI().toURL());
-        Parent root = FXMLLoader.load(new File("src/main/java/view/SellerAccountPage.fxml").toURI().toURL());
+        Parent root = FXMLLoader.load(new File("src/main/java/view/CartPage.fxml").toURI().toURL());
 
         Scene scene = new Scene(root, 1000, 600);
 

@@ -79,3 +79,20 @@
 .tab .tab-header-background {
     -fx-background-color: transparent;
 }
+
+.cart-label{
+    -fx-background-color: #000000;
+    -fx-text-fill:WHITE;
+    -fx-background-radius:20px;
+    -fx-alignment: center;
+}
+
+.up-down-btn{
+    -fx-background-color: transparent;
+}
+.up-down-btn:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(41, 53, 77, 0.8), 10, 0, 0, 0);
+}
+.up-down-btn:pressed{
+    -fx-effect:none;
+}
