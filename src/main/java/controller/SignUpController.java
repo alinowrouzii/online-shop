@@ -26,7 +26,6 @@ public class SignUpController implements Initializable {
     public TextField passwordTextField;
     public Button registerBtn;
     public TabPane tabPane;
-    @FXML
     public Button loginBtn;
 
 

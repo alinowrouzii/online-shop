@@ -3,10 +3,12 @@ package view;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import org.controlsfx.control.Rating;
 
@@ -46,7 +48,22 @@ public class ProductBox extends VBox {
 //        rating.setLayoutY(185.0);
 
         getChildren().addAll(view, name,price, rating);
+        changeBackgroundOnHoverUsingEvents(this);
     }
+    public void changeBackgroundOnHoverUsingEvents(final Node node) {
+        node.setStyle("-fx-effect:none;");
+        node.setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override public void handle(MouseEvent mouseEvent) {
+                node.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);");
+            }
+        });
+        node.setOnMouseExited(new EventHandler<MouseEvent>() {
+            @Override public void handle(MouseEvent mouseEvent) {
+                node.setStyle("-fx-effect:none;");
+            }
+        });
+    }
+
     public void setImage(Image image){
         this.image = image;
         this.view.setImage(image);

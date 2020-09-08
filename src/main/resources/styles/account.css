@@ -35,7 +35,7 @@
     -fx-padding: 0px 10px 3px 10px;
     -fx-background-radius: 5, 5, 5, 0;
     -fx-background-color: linear-gradient(#e9faff, #e2e6ff);
-    -fx-padding:4px;
+    /*-fx-padding:4px;*/
 }
 
 .wrong-info{

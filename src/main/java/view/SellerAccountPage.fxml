@@ -6,7 +6,6 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -85,14 +84,23 @@
                <Label layoutX="28.0" layoutY="665.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="your requests" />
                <TableView layoutX="14.0" layoutY="707.0" prefHeight="298.0" prefWidth="869.0">
                  <columns>
-                   <TableColumn prefWidth="75.0" text="C1" />
-                   <TableColumn prefWidth="75.0" text="C2" />
+
                  </columns>
                </TableView>
                 </Pane>
 
             </ScrollPane>
 
+        </Tab>
+        <Tab text="logs">
+            <ScrollPane>
+                <Pane prefHeight="501.0" prefWidth="891.0">
+                    <TableView layoutX="30.0" layoutY="25.0" prefHeight="450.0" prefWidth="837.0">
+                        <columns>
+                        </columns>
+                    </TableView>
+                </Pane>
+            </ScrollPane>
         </Tab>
     </JFXTabPane>
 

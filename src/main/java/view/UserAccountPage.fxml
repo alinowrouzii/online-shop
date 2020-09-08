@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTabPane?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-
 <Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/account.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserAccountController">
     <ImageView fitHeight="600.0" fitWidth="1000.0">
         <Image url="@../../resources/icons/sample_pic_3.jpg">
@@ -52,18 +44,10 @@
         </Tab>
         <Tab text="logs">
             <ScrollPane>
-            <content>
-               <Pane prefHeight="501.0" prefWidth="891.0">
-                  <children>
-                     <TableView layoutX="30.0" layoutY="25.0" prefHeight="450.0" prefWidth="837.0">
-                       <columns>
-                         <TableColumn prefWidth="75.0" text="C1" />
-                         <TableColumn prefWidth="75.0" text="C2" />
-                       </columns>
-                     </TableView>
-                  </children>
-               </Pane>
-            </content></ScrollPane>
+                <Pane prefHeight="501.0" prefWidth="891.0">
+                    <TableView layoutX="30.0" layoutY="25.0" prefHeight="450.0" prefWidth="837.0"/>
+                </Pane>
+            </ScrollPane>
         </Tab>
     </JFXTabPane>
 

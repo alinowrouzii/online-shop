@@ -1,34 +1,19 @@
 package controller;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import model.Categoory;
-import model.Product;
-import model.Seller;
 import model.ShoppingSystem;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.math.BigInteger;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -47,6 +32,7 @@ public class UserAccountController implements Initializable {
     public Button chanePass;
     public Label idLabel;
     public ImageView profileImageView;
+    public Label balanceLabel;
 
 
     public void changeProfilePicture(MouseEvent mouseEvent) {

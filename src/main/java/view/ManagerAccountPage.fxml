@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTabPane?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-
 <Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/account.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagerAccountController">
     <ImageView fitHeight="600.0" fitWidth="1000.0">
         <Image url="@../../resources/icons/sample_pic_3.jpg">
@@ -85,24 +77,14 @@
                     <Label layoutX="640.0" layoutY="578.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="product brand" />
                     <TextField layoutX="641.0" layoutY="615.0" prefHeight="25.0" prefWidth="108.0" promptText="brand name" styleClass="textField" />
                     <Label layoutX="28.0" layoutY="665.0" prefHeight="25.0" prefWidth="107.0" styleClass="edit-remove-label" text="users requests" />
-                    <TableView layoutX="14.0" layoutY="707.0" prefHeight="298.0" prefWidth="869.0">
-                        <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                        </columns>
-                    </TableView>
+                    <TableView layoutX="14.0" layoutY="707.0" prefHeight="298.0" prefWidth="869.0"/>
                <Label layoutX="26.0" layoutY="1018.0" prefHeight="25.0" prefWidth="172.0" styleClass="edit-remove-label" text="Accept or remove Request" />
                <Label layoutX="234.0" layoutY="1019.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Request ID" />
                <Button layoutX="484.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Accept!" />
                <TextField layoutX="364.0" layoutY="1019.0" prefHeight="25.0" prefWidth="108.0" promptText="request ID" styleClass="textField" />
                <Button layoutX="592.0" layoutY="1019.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Remove!" />
                <Label layoutX="28.0" layoutY="1073.0" prefHeight="25.0" prefWidth="137.0" styleClass="edit-remove-label" text="products requests" />
-               <TableView layoutX="14.0" layoutY="1115.0" prefHeight="298.0" prefWidth="869.0">
-                  <columns>
-                     <TableColumn prefWidth="75.0" text="C1" />
-                     <TableColumn prefWidth="75.0" text="C2" />
-                  </columns>
-               </TableView>
+                    <TableView layoutX="14.0" layoutY="1115.0" prefHeight="298.0" prefWidth="869.0"/>
                <Label layoutX="26.0" layoutY="1426.0" prefHeight="25.0" prefWidth="172.0" styleClass="edit-remove-label" text="Accept or remove Request" />
                <Label layoutX="234.0" layoutY="1427.0" prefHeight="25.0" prefWidth="107.0" styleClass="product-fields-label" text="Request ID" />
                <Button layoutX="484.0" layoutY="1427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" styleClass="submitBtn" text="Accept!" />
@@ -112,6 +94,13 @@
 
             </ScrollPane>
 
+        </Tab>
+        <Tab text="logs">
+            <ScrollPane>
+                <Pane prefHeight="501.0" prefWidth="891.0">
+                    <TableView layoutX="30.0" layoutY="25.0" prefHeight="450.0" prefWidth="837.0"/>
+                </Pane>
+            </ScrollPane>
         </Tab>
     </JFXTabPane>
 
