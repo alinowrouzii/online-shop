@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import model.ShoppingSystem;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,9 +29,11 @@ public class MainMenuController implements Initializable {
     public Button signUpButton;
     public Button productsButton;
     public Button aboutButton;
+    public ShoppingSystem shoppingSystem;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        shoppingSystem=SystemInitializer.getShoppingSystem();
     }
 
     public void loginButtonClicked(ActionEvent actionEvent) throws IOException {

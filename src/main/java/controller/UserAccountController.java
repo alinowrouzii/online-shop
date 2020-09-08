@@ -7,6 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
@@ -14,6 +18,7 @@ import javafx.stage.Stage;
 import model.Categoory;
 import model.Product;
 import model.Seller;
+import model.ShoppingSystem;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,10 +30,17 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class UserAccountController implements Initializable {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class UserAccountController implements Initializable {
+    public ShoppingSystem shoppingSystem;
     public Button profileButton;
     public Button logsButton;
     public Button wallet;
+    public ImageView profilePicture;
     public Label usernameLabel;
+    public Label typeLabel;
     public TextField fullNameTextField;
     public TextField emailTextField;
     public TextField phoneNumTextField;
@@ -66,5 +78,10 @@ public class UserAccountController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        shoppingSystem=SystemInitializer.getShoppingSystem();
     }
 }

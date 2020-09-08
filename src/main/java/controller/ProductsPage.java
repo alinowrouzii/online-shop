@@ -11,6 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import model.Shop;
+import model.ShoppingSystem;
 import javafx.stage.Stage;
 import org.controlsfx.control.RangeSlider;
 import view.ProductBox;
@@ -24,10 +26,12 @@ import java.util.ResourceBundle;
 
 public class ProductsPage implements Initializable {
     public GridPane productsPane;
+    public ShoppingSystem shoppingSystem;
     public Button loginButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        shoppingSystem=SystemInitializer.getShoppingSystem();
         for (int i=0 ;i<7 ; i++){
             ProductBox box = new ProductBox("product"+(i+1), 5);
             box.setImage(new Image(new File("src/main/resources/icons/product"+(i+13)+".png").toURI().toString()));
