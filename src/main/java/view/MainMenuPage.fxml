@@ -6,16 +6,27 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/login.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
-   <children>
-      <Button fx:id="loginButton" layoutX="522.0" layoutY="208.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="61.0" prefWidth="309.0" styleClass="btnLogin" text="Login" />
-      <Button fx:id="signUpButton" layoutX="522.0" layoutY="300.0" mnemonicParsing="false" onAction="#signUpButtonClicked" prefHeight="61.0" prefWidth="309.0" styleClass="btnSignUp" text="SIgnUp" />
-      <Button fx:id="productsButton" layoutX="522.0" layoutY="390.0" mnemonicParsing="false" onAction="#productsButtonClicked" prefHeight="61.0" prefWidth="309.0" styleClass="btnProducts" text="Products" />
-      <Button fx:id="aboutButton" layoutX="522.0" layoutY="481.0" mnemonicParsing="false" onAction="#aboutButtonClicked" prefHeight="61.0" prefWidth="309.0" styleClass="btnAboutUs" text="about us!" />
-      <ImageView fitHeight="247.0" fitWidth="414.0" layoutX="41.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../resources/icons/shop_logo.png" />
-      </ImageView>
-      <Label alignment="center" layoutX="20.0" layoutY="262.0" prefHeight="103.0" prefWidth="359.0" style="-fx-text-fill: black; -fx-font-size: 25 ;" text="Enjoy shopping!" />
-      <Label alignment="center" layoutX="570.0" layoutY="86.0" prefHeight="90.0" prefWidth="235.0" style="-fx-text-font-family: 'Comic Sans MS'; -fx-font-size: 45;" text="Welcome!" />
-   </children>
+<Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/login.css" xmlns="http://javafx.com/javafx/8.0.172-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+   <ImageView fitHeight="600.0" fitWidth="1000.0">
+      <Image url="@../../resources/icons/sample_pic_3.jpg">
+      </Image>
+   </ImageView>
+
+   <Button fx:id="loginButton" layoutX="522.0" layoutY="208.0" mnemonicParsing="false" onAction="#loginButtonClicked"
+           prefHeight="61.0" prefWidth="309.0" styleClass="btnLogin" text="Login"/>
+   <Button fx:id="signUpButton" layoutX="522.0" layoutY="300.0" mnemonicParsing="false" onAction="#signUpButtonClicked"
+           prefHeight="61.0" prefWidth="309.0" styleClass="btnSignUp" text="SIgnUp"/>
+   <Button fx:id="productsButton" layoutX="522.0" layoutY="390.0" mnemonicParsing="false"
+           onAction="#productsButtonClicked" prefHeight="61.0" prefWidth="309.0" styleClass="btnProducts"
+           text="Products"/>
+   <Button fx:id="aboutButton" layoutX="522.0" layoutY="481.0" mnemonicParsing="false" onAction="#aboutButtonClicked"
+           prefHeight="61.0" prefWidth="309.0" styleClass="btnAboutUs" text="about us!"/>
+   <ImageView fitHeight="247.0" fitWidth="414.0" layoutX="41.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../resources/icons/shop_logo.png"/>
+   </ImageView>
+   <Label alignment="center" layoutX="20.0" layoutY="262.0" prefHeight="103.0" prefWidth="359.0"
+          style="-fx-text-fill: black; -fx-font-size: 25 ;" text="Enjoy shopping!"/>
+   <Label alignment="center" layoutX="570.0" layoutY="86.0" prefHeight="90.0" prefWidth="235.0"
+          style="-fx-text-font-family: 'Comic Sans MS'; -fx-font-size: 45;" text="Welcome!"/>
 </Pane>

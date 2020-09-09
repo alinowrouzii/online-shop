@@ -23,17 +23,17 @@
     /*-fx-background-radius: 30, 30, 29, 28;*/
     -fx-background-radius: 30 30 29 30;
     -fx-padding: 3px 10px 3px 10px;
-    -fx-background-color: linear-gradient(#ffc270, #ffc66f);
+    -fx-background-color: linear-gradient(#55d3ff, #2c7bff);
 }
 .btnProducts:hover {
-    -fx-background-color: linear-gradient(#fff7d7, #ffc66f);
+    -fx-background-color: linear-gradient(#6aecff, #3430ff);
 }
 
 .btnAboutUs {
     /*-fx-background-radius: 30, 30, 29, 28;*/
     -fx-background-radius: 30 30 29 30;
     -fx-padding: 3px 10px 3px 10px;
-    -fx-background-color: linear-gradient(#aae5ff, #78d1ff);
+    -fx-background-color: linear-gradient(#ffd41e, #ffbe29);
 }
 
 .btnLogin:hover {

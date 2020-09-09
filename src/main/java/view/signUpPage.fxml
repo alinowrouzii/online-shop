@@ -16,8 +16,9 @@
 <Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/login.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
 
     <ImageView fitHeight="600.0" fitWidth="1000.0">
-        <Image url="@../../resources/icons/sign_up_background.png">
-        </Image>
+<!--        <Image url="@../../resources/icons/sign_up_background.png">-->
+<!--        </Image>-->
+                <Image url="@../../resources/icons/sample_pic_3.jpg"/>
     </ImageView>
     <ImageView layoutX="570.0" layoutY="37.0">
         <Image url="@../../resources/icons/shop_logo.png" />

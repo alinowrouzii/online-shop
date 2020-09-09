@@ -16,12 +16,15 @@
 <?import javafx.scene.text.TextFlow?>
 
 <BorderPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/login.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageController">
-        <center>
+    <ImageView fitHeight="600.0" fitWidth="1000.0">
+        <Image url="@../../resources/icons/sample_pic_3.jpg">
+        </Image>
+    </ImageView>
+    <center>
             <VBox alignment="center" maxWidth="270" prefWidth="200" spacing="4">
                 <padding><Insets bottom="10" left="25" right="25" top="25" /></padding>
                 <ImageView fitWidth="300">
                     <Image url="@/icons/shop_logo.png" />
-
                 </ImageView>
                 <HBox>
                     <Label text="User name" />
