@@ -109,7 +109,7 @@
     </ScrollPane>
    <Button layoutX="100.0" layoutY="16.0" mnemonicParsing="false" styleClass="profile-button" text="your profile" />
    <Button layoutX="25.0" layoutY="16.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="67.0" styleClass="sign-out-button" text="sign out" />
-   <Button fx:id="loginButton" layoutX="25.0" layoutY="59.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="28.0" prefWidth="114.0" styleClass="btnSignUp" text="Login or sign up" />
+   <Button fx:id="loginButton" layoutX="25.0" layoutY="59.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="28.0" prefWidth="149.0" styleClass="btnSignUp" text="Login or sign up" />
 
 
 </Pane>
