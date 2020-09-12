@@ -33,14 +33,18 @@ public class Shop {
         categoriesManager.addCategory(cat); ;
         Seller seller = new Seller("rwlj123", "kkk", "jjjjj", "ll@qq","123456","132321","nothing");
 
-        Product product = new Product("2","book",new BigInteger("111000"),cat,seller,5);
-        Product product2 = new Product("3","book1",new BigInteger("22000"),cat,seller,5);
-        Product product3 = new Product("5","book2",new BigInteger("33000"),cat,seller,5);
-        Product product4 = new Product("6","book3",new BigInteger("44000"),cat,seller,5);
-        Product product5 = new Product("12","book4",new BigInteger("55000"),cat,seller,5);
-        Product product6 = new Product("13","book5",new BigInteger("66000"),cat,seller,5);
-        Product product7 = new Product("14","book6",new BigInteger("77000"),cat,seller,5);
-        Product product8 = new Product("15","book7",new BigInteger("88000"),cat,seller,5);
+        Product product = new Product("13","book",new BigInteger("111000"),cat,seller,5);
+        Product product2 = new Product("14","book1",new BigInteger("22000"),cat,seller,5);
+        Product product3 = new Product("15","book2",new BigInteger("33000"),cat,seller,5);
+        Product product4 = new Product("16","book3",new BigInteger("44000"),cat,seller,5);
+        Product product5 = new Product("17","book4",new BigInteger("55000"),cat,seller,5);
+        Product product6 = new Product("18","book5",new BigInteger("66000"),cat,seller,5);
+        Product product7 = new Product("19","book6",new BigInteger("77000"),cat,seller,5);
+        Product product8 = new Product("20","book7",new BigInteger("88000"),cat,seller,5);
+        Product product9 = new Product("21","book9",new BigInteger("99000"),cat,seller,5);
+        Product product10 = new Product("22","book10",new BigInteger("17000"),cat,seller,5);
+        Product product11 = new Product("23","book11",new BigInteger("132000"),cat,seller,5);
+        Product product12 = new Product("24","book11",new BigInteger("132000"),cat,seller,5);
         productsManager.addProduct(product);
         productsManager.addProduct(product2);
         productsManager.addProduct(product3);
@@ -49,14 +53,21 @@ public class Shop {
         productsManager.addProduct(product6);
         productsManager.addProduct(product7);
         productsManager.addProduct(product8);
+        productsManager.addProduct(product9);
+        productsManager.addProduct(product10);
+        productsManager.addProduct(product11);
+        productsManager.addProduct(product12);
         cat.addProduct(product);
         cat.addProduct(product2);
         cat.addProduct(product3);
         cat.addProduct(product4);
         cat.addProduct(product5);
         cat.addProduct(product6);
-        cat.addProduct(product8);
         cat.addProduct(product7);
+        cat.addProduct(product8);
+        cat.addProduct(product9);
+        cat.addProduct(product10);
+        cat.addProduct(product11);
     }
 
     void acceptRequest(Request request) {

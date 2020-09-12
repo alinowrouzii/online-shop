@@ -20,7 +20,7 @@ public class Categoory {
     void removeProduct(Product product){
         productsList.remove(product);
     }
-    String getName(){
+    public String getName(){
         return categoryName ;
     }
     public ArrayList<Product> getProducts() {

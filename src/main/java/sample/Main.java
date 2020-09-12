@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXPopup;
 import com.jfoenix.controls.JFXRippler;
+import controller.SystemInitializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -26,6 +27,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+        SystemInitializer initialize = new SystemInitializer();
 //        Parent root = FXMLLoader.load(new File("src/main/java/view/ManagerAccountPage.fxml").toURI().toURL());
         Parent root = FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
 

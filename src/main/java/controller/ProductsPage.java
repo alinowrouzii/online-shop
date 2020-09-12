@@ -12,6 +12,9 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javassist.tools.rmi.ObjectNotFoundException;
+import model.Product;
 import model.Shop;
 import model.ShoppingSystem;
 import javafx.stage.Stage;
@@ -30,29 +33,68 @@ public class ProductsPage implements Initializable {
     public ShoppingSystem shoppingSystem;
     public Button loginButton;
     public JFXButton cartButton;
-
+    private int startIndex;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         shoppingSystem = SystemInitializer.getShoppingSystem();
-        for (int i=0 ;i<7 ; i++){
-            ProductBox box = new ProductBox("product"+(i+1), 5);
-            box.setImage(new Image(new File("src/main/resources/icons/product"+(i+13)+".png").toURI().toString()));
-            Random random = new Random();
-            box.setRating(i%5.12);
-            box.setPrice("Price: "+i%5.12+12000+"");
-            productsPane.add(box,i%3,i/3);
+        System.out.println("11"+shoppingSystem);
+
+        showOnProductPage("first");
+
+    }
+    boolean showOnProductPage(String mode)  {
+        if(mode.equals("first")){
+            startIndex = 0;
+        }else if(mode.equals("next") && shoppingSystem.getFilteredProducts().size() > startIndex+9){
+            startIndex +=9;
+        }else if(mode.equals("back") &&  startIndex-9>=0){
+            startIndex -=9;
+        }else{
+            return false;
+        }
+        System.out.println("next startIndex"+startIndex);
+        productsPane.getChildren().clear();
+        productsPane.setGridLinesVisible(true);
+
+        for(int i=startIndex; i<startIndex+9 && i<shoppingSystem.getFilteredProducts().size(); i++){
+            Product product= shoppingSystem.getFilteredProducts().get(i);
+            String productId = product.getProductId();
+            ProductBox box = new ProductBox("product: "+product.getProductName(), 5);
+            box.setImage(new Image(new File("src/main/resources/products/"+productId+".png").toURI().toString()));
+            box.setPrice("Price: "+product.getPrice().toString());
+            int columnIndex =i%3;
+            int rowIndex =(i/3)%3;
+            productsPane.add(box,columnIndex, rowIndex);
             int finalI = i;
             box.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent t) {
                     System.out.println("Open product page| product: "+ (finalI +1));
-                    //TODO : open product page when click on product
+                    try {
+                        showProduct(product);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                private void showProduct(Product product) throws IOException {
+                    Stage stage;
+                    FXMLLoader loader = new FXMLLoader(new File("src/main/java/view/ProductPage.fxml").toURI().toURL());
+                    Pane root = loader.load();
+
+                    ProductPageController controller = loader.getController();
+                    controller.setInfoOfProduct(product.getProductId(),product.getProductName(),product.getProductBrand(),product.getCategory().getName(),product.getPrice().toString());
+
+                    stage = (Stage) loginButton.getScene().getWindow();
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.setTitle(product.getProductName());
+                    stage.show();
                 }
             });
         }
-
+        return true;
     }
-
     public void loginButtonClicked(ActionEvent actionEvent) {
         Stage stage;
         Parent root = null;
@@ -85,5 +127,13 @@ public class ProductsPage implements Initializable {
             stage.setTitle("Cart");
             stage.show();
         }
+    }
+
+    public void nextButtonClicked(ActionEvent actionEvent) {
+        showOnProductPage("next");
+    }
+
+    public void backButtonClicked(ActionEvent actionEvent)  {
+        showOnProductPage("back");
     }
 }

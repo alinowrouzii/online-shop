@@ -40,6 +40,10 @@
     -fx-background-color: linear-gradient(#38f0ff, #1b47ff);
 }
 
+.btnLogin:pressed {
+    -fx-background-color: linear-gradient(#16beff, #026fff);
+}
+
 .btnSignUp {
     -fx-background-radius: 30, 30, 29, 28;
     -fx-padding: 3px 10px 3px 10px;
@@ -48,6 +52,9 @@
 
 .btnSignUp:hover {
     -fx-background-color: linear-gradient(#ffd81d, #ff741e);
+}
+.btnSignUp:pressed {
+    -fx-background-color: linear-gradient(#fff643, #ff8d27);
 }
 
 .text-field{
@@ -237,4 +244,9 @@
 }
 .back-btn:pressed{
     -fx-effect: none;
+}
+
+
+.myGridStyle Line {
+    -fx-stroke   : #352626;
 }
