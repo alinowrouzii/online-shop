@@ -26,13 +26,15 @@
 <!--    539-->
     <JFXTabPane fx:id="tabPane" layoutX="42.0" layoutY="37.0" prefHeight="539.0" prefWidth="419.0" styleClass="sign-up-page-tab" tabClosingPolicy="UNAVAILABLE">
         <Tab text="Sign as User">
+
+            <Label fx:id="wrongInputFormat" layoutX="51.0" layoutY="80.0" visible="false" styleClass="wrongInfoLabel"/>
                 <Pane layoutY="-1.0" prefHeight="511.0" prefWidth="419.0">
                     <TextField fx:id="firstNameTextField" layoutX="51.0" layoutY="85.0" prefHeight="37.0" prefWidth="151.0" promptText="your first name" />
                     <TextField fx:id="lastNameTextField" layoutX="219.0" layoutY="85.0" prefHeight="37.0" prefWidth="146.0" promptText="your last name" />
                     <TextField fx:id="emailTextField" layoutX="51.0" layoutY="160.0" prefHeight="37.0" prefWidth="317.0" promptText="your E-mail address" />
                     <TextField fx:id="userNameTextField" layoutX="51.0" layoutY="235.0" prefHeight="37.0" prefWidth="317.0" promptText="your user name" />
                     <PasswordField fx:id="passwordTextField" layoutX="51.0" layoutY="307.0" prefHeight="37.0" prefWidth="317.0" promptText="your password" />
-                    <Button fx:id="registerBtn" layoutX="51.0" layoutY="380.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="317.0" style="-fx-font-size: 21;" styleClass="btnSignUp" text="Register now!" />
+                    <Button fx:id="registerBtn" layoutX="51.0" layoutY="380.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="317.0" style="-fx-font-size: 21;" styleClass="btnSignUp" text="Register now!" onAction="#registerClicked" />
                     <CheckBox layoutX="52.0" layoutY="351.0" mnemonicParsing="false" text="Accept terms of services" />
                     <Label layoutX="51.0" layoutY="60.0" text="First name" />
                     <Label layoutX="221.0" layoutY="60.0" text="Last name" />
@@ -51,7 +53,7 @@
                      <TextField layoutX="51.0" layoutY="234.0" prefHeight="37.0" prefWidth="317.0" promptText="your E-mail address" />
                      <TextField layoutX="51.0" layoutY="309.0" prefHeight="37.0" prefWidth="317.0" promptText="your user name" />
                      <PasswordField layoutX="51.0" layoutY="381.0" prefHeight="37.0" prefWidth="317.0" promptText="your password" />
-                     <Button layoutX="51.0" layoutY="454.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="317.0" style="-fx-font-size: 21;" styleClass="btnSignUp" text="Register now!" />
+                     <Button layoutX="51.0" layoutY="454.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="317.0" style="-fx-font-size: 21;" styleClass="btnSignUp" text="Register now!"  />
                      <CheckBox layoutX="52.0" layoutY="425.0" mnemonicParsing="false" text="Accept terms of services" />
                      <Label layoutX="51.0" layoutY="60.0" text="First name" />
                      <Label layoutX="221.0" layoutY="60.0" text="Last name" />
