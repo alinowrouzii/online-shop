@@ -575,7 +575,7 @@ public class Interface {
             if(input.contains("digest")){
                 System.out.println(shoppingSystem.getProduct(productId).getProductInfo());
             }else if(input.contains("add to cart")){
-                shoppingSystem.addProductToCart(productId);
+                shoppingSystem.addProductToCart(productId,3);
             }else if(input.contains("attributes")){
 
             }

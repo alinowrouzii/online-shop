@@ -13,16 +13,19 @@ public class Cart {
         products = new HashMap<>();
         totalPrice = new BigInteger("0") ;
     }
-    void addProduct(Product product,int amount) {
-        int oldAmount=0;
-        //TODO: should be checked
-        if(products.get(product) !=null){
-            oldAmount = products.get(product);
+    boolean addProduct(Product product,int amount) {
+        if(product.decreaseAmountOfProducts(amount)) {
+            int oldAmount = 0;
+            //TODO: should be checked
+            if (products.get(product) != null) {
+                oldAmount = products.get(product);
+            }
+            removeProductAfter(REMOVE_TIME, product, amount);
+            updateTotalPrice();
+            products.put(product, amount + oldAmount);
+            return true;
         }
-        removeProductAfter(REMOVE_TIME, product,amount) ;
-        updateTotalPrice();
-        products.put(product,amount+oldAmount);
-        product.decreaseAmountOfProducts(amount);
+        return false;
     }
 
     private void updateTotalPrice() {

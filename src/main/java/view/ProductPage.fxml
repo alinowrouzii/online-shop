@@ -17,11 +17,11 @@
     </ImageView>
     <ImageView fx:id="productView" fitHeight="312.0" fitWidth="287.0" layoutX="55.0" layoutY="48.0" pickOnBounds="true">
     </ImageView>
-    <ImageView fx:id="productView_1" fitHeight="105.0" fitWidth="103.0" layoutX="28.0" layoutY="386.0" pickOnBounds="true" styleClass="hoverable">
+    <ImageView fx:id="productView_1" fitHeight="105.0" fitWidth="103.0" layoutX="28.0" layoutY="386.0" onMouseClicked="#firstViewSelected" pickOnBounds="true" styleClass="hoverable">
     </ImageView>
-    <ImageView fx:id="productView_2" fitHeight="105.0" fitWidth="103.0" layoutX="147.0" layoutY="386.0" pickOnBounds="true" styleClass="hoverable">
+    <ImageView fx:id="productView_2" fitHeight="105.0" fitWidth="103.0" layoutX="147.0" layoutY="386.0" onMouseClicked="#secondViewSelected" pickOnBounds="true" styleClass="hoverable">
     </ImageView>
-    <ImageView fx:id="productView_3" fitHeight="105.0" fitWidth="103.0" layoutX="269.0" layoutY="386.0" pickOnBounds="true" styleClass="hoverable">
+    <ImageView fx:id="productView_3" fitHeight="105.0" fitWidth="103.0" layoutX="269.0" layoutY="386.0" onMouseClicked="#thirdViewSelected" pickOnBounds="true" styleClass="hoverable">
     </ImageView>
     <ScrollPane layoutX="398.0" layoutY="62.0" prefHeight="503.0" prefWidth="541.0">
         <Pane prefHeight="660.0" prefWidth="526.0">
@@ -34,12 +34,13 @@
             <Label fx:id="productName" alignment="CENTER" layoutX="263.0" layoutY="94.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Ali Nowrouzi" />
             <Label fx:id="productBrand" alignment="CENTER" layoutX="263.0" layoutY="141.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Nowrouz" />
             <Label fx:id="productCategory" alignment="CENTER" layoutX="263.0" layoutY="190.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Category" />
-            <Label fx:id="productPrice"  alignment="CENTER" layoutX="263.0" layoutY="236.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Label" />
-            <Button fx:id="addToCartButton" layoutX="97.0" layoutY="315.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" styleClass="add-to-cart-button" text="Add to Cart!" />
+            <Label fx:id="productPrice" alignment="CENTER" layoutX="263.0" layoutY="236.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Label" />
+            <Button fx:id="addToCartButton" layoutX="97.0" layoutY="315.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" styleClass="add-to-cart-button" text="Add to Cart!" onAction="#addToCartButtonSelected"/>
             <TextField fx:id="amountOfProduct" layoutX="312.0" layoutY="320.0" prefHeight="25.0" prefWidth="46.0" styleClass="textField" />
             <Label alignment="CENTER" layoutX="250.0" layoutY="316.0" prefHeight="33.0" prefWidth="62.0" style="-fx-font-size: 15px" text="Amount" />
             <Label alignment="CENTER" layoutX="85.0" layoutY="395.0" prefHeight="34.0" prefWidth="127.0" styleClass="cart-label" text="Description" />
             <TextArea fx:id="descriptionTextArea" editable="false" layoutX="63.0" layoutY="446.0" prefHeight="200.0" prefWidth="414.0" wrapText="true" />
+         <Label fx:id="addedLabel" alignment="CENTER" layoutX="366.0" layoutY="314.0" prefHeight="33.0" prefWidth="62.0" style="-fx-font-size: 15px" text="Added!" />
         </Pane>
     </ScrollPane>
    <JFXButton fx:id="cartButton" layoutX="794.0" layoutY="9.0" onMouseClicked="#cartButtonClicked" prefHeight="72.0" prefWidth="72.0" styleClass="cart-icon">
@@ -49,5 +50,5 @@
           </ImageView>
       </graphic>
    </JFXButton>
-   <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#cartButtonClicked" prefHeight="25.0" prefWidth="64.0" styleClass="back-btn" text="Back" onAction="#BackButtonClicked"/>
+   <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButtonClicked" onMouseClicked="#cartButtonClicked" prefHeight="25.0" prefWidth="64.0" styleClass="back-btn" text="Back" />
 </Pane>

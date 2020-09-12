@@ -13,20 +13,20 @@
             fx:controller="controller.ProductInfoHBox"
             >
 <!--    <HBox alignment="CENTER" prefHeight="59.0" prefWidth="795.0" spacing="20" style="-fx-padding: 0 10 0 20;">-->
-        <Label prefHeight="25.0" prefWidth="85.0" text="Product ID" />
-        <Label prefHeight="25.0" prefWidth="94.0" text="Product name" />
-        <Label prefHeight="25.0" prefWidth="85.0" text=" price" />
-        <Label prefHeight="25.0" prefWidth="102.0" text="Total price" />
-        <Label prefHeight="25.0" prefWidth="75.0" text="Amount" />
+        <Label fx:id="productId" prefHeight="25.0" prefWidth="85.0" text="Product ID" />
+        <Label fx:id="productName" prefHeight="25.0" prefWidth="94.0" text="Product name" />
+        <Label fx:id="productPrice" prefHeight="25.0" prefWidth="85.0" text=" price" />
+        <Label fx:id="productTotalPrice" prefHeight="25.0" prefWidth="102.0" text="Total price" />
+        <Label fx:id="productAmount" prefHeight="25.0" prefWidth="75.0" text="Amount" />
         <VBox alignment="CENTER" prefHeight="59.0" prefWidth="77.0">
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn">
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn" onAction="#amountIncreasedOne">
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                         <Image url="@../../resources/icons/up_icon.png" />
                     </ImageView>
                 </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn">
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn" onAction="#amountDecreasedOne">
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                         <Image url="@../../resources/icons/down-icon.png" />
@@ -34,9 +34,9 @@
                 </graphic>
             </Button>
         </VBox>
-        <Button mnemonicParsing="false" styleClass="up-down-btn">
+        <Button fx:id="deleteIcon" mnemonicParsing="false" styleClass="up-down-btn">
             <graphic>
-                <ImageView fitHeight="39.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="39.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#deleteFromCart">
                     <Image url="@../../resources/icons/filled-trash.png" />
                 </ImageView>
             </graphic>

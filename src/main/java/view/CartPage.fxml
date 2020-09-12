@@ -14,47 +14,47 @@
         <Image url="@../../resources/icons/sample_pic_3.jpg">
         </Image>
     </ImageView>
-   <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Back" onMouseClicked="#cartButtonClicked" styleClass="back-btn"/>
+   <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#backButtonClicked" prefHeight="25.0" prefWidth="64.0" styleClass="back-btn" text="Back" />
     <ScrollPane layoutX="99.0" layoutY="134.0" prefHeight="403.0" prefWidth="802.0">
-        <VBox fx:id="cartHBox" prefHeight="399.0" prefWidth="782.0" spacing="15">
-            <HBox alignment="CENTER" prefHeight="59.0" prefWidth="795.0" spacing="20" style="-fx-padding: 0 10 0 20;">
-                <Label prefHeight="25.0" prefWidth="85.0" text="Product ID" />
-            <Label prefHeight="25.0" prefWidth="94.0" text="Product name" />
-            <Label prefHeight="25.0" prefWidth="85.0" text=" price" />
-            <Label prefHeight="25.0" prefWidth="102.0" text="Total price" />
-            <Label prefHeight="25.0" prefWidth="75.0" text="Amount" />
-            <VBox alignment="CENTER" prefHeight="59.0" prefWidth="77.0">
-                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn">
-                    <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../../resources/icons/up_icon.png" />
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn">
-                    <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../../resources/icons/down-icon.png" />
-                        </ImageView>
-                    </graphic>
-                </Button>
-            </VBox>
-                <Button mnemonicParsing="false" styleClass="up-down-btn">
-                    <graphic>
-                        <ImageView fitHeight="39.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../../resources/icons/filled-trash.png" />
-                        </ImageView>
-                    </graphic>
-                </Button>
-            </HBox>
+        <VBox fx:id="cartVBox" prefHeight="399.0" prefWidth="782.0" spacing="15">
+<!--            <HBox alignment="CENTER" prefHeight="59.0" prefWidth="795.0" spacing="20" style="-fx-padding: 0 10 0 20;">-->
+<!--                <Label prefHeight="25.0" prefWidth="85.0" text="Product ID" />-->
+<!--            <Label prefHeight="25.0" prefWidth="94.0" text="Product name" />-->
+<!--            <Label prefHeight="25.0" prefWidth="85.0" text=" price" />-->
+<!--            <Label prefHeight="25.0" prefWidth="102.0" text="Total price" />-->
+<!--            <Label prefHeight="25.0" prefWidth="75.0" text="Amount" />-->
+<!--            <VBox alignment="CENTER" prefHeight="59.0" prefWidth="77.0">-->
+<!--                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn">-->
+<!--                    <graphic>-->
+<!--                        <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                            <Image url="@../../resources/icons/up_icon.png" />-->
+<!--                        </ImageView>-->
+<!--                    </graphic>-->
+<!--                </Button>-->
+<!--                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" styleClass="up-down-btn">-->
+<!--                    <graphic>-->
+<!--                        <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                            <Image url="@../../resources/icons/down-icon.png" />-->
+<!--                        </ImageView>-->
+<!--                    </graphic>-->
+<!--                </Button>-->
+<!--            </VBox>-->
+<!--                <Button mnemonicParsing="false" styleClass="up-down-btn">-->
+<!--                    <graphic>-->
+<!--                        <ImageView fitHeight="39.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                            <Image url="@../../resources/icons/filled-trash.png" />-->
+<!--                        </ImageView>-->
+<!--                    </graphic>-->
+<!--                </Button>-->
+<!--            </HBox>-->
         </VBox>
     </ScrollPane>
-   <Label layoutX="151.0" layoutY="109.0" prefHeight="25.0" prefWidth="82.0" styleClass="cart-label" text="Product ID" />
-   <Label layoutX="265.0" layoutY="109.0" prefHeight="25.0" prefWidth="94.0" styleClass="cart-label" text="Product Name" />
-   <Label layoutX="378.0" layoutY="109.0" prefHeight="25.0" prefWidth="82.0" styleClass="cart-label" text="Price" />
-   <Label layoutX="481.0" layoutY="109.0" prefHeight="25.0" prefWidth="94.0" styleClass="cart-label" text="Total price" />
-   <Label layoutX="691.0" layoutY="109.0" prefHeight="25.0" prefWidth="94.0" styleClass="cart-label" text="Increse/Decrease" />
-   <Label layoutX="602.0" layoutY="109.0" prefHeight="25.0" prefWidth="64.0" styleClass="cart-label" text="Amount" />
+   <Label layoutX="139.0" layoutY="109.0" prefHeight="25.0" prefWidth="82.0" styleClass="cart-label" text="Product ID" />
+   <Label layoutX="248.0" layoutY="109.0" prefHeight="25.0" prefWidth="94.0" styleClass="cart-label" text="Product Name" />
+   <Label layoutX="364.0" layoutY="109.0" prefHeight="25.0" prefWidth="52.0" styleClass="cart-label" text="Price" />
+   <Label layoutX="455.0" layoutY="109.0" prefHeight="25.0" prefWidth="94.0" styleClass="cart-label" text="Total price" />
+   <Label layoutX="686.0" layoutY="109.0" prefHeight="25.0" prefWidth="82.0" styleClass="cart-label" text="Inc/Dec" />
+   <Label layoutX="588.0" layoutY="109.0" prefHeight="25.0" prefWidth="64.0" styleClass="cart-label" text="Amount" />
     <Button layoutX="176.0" layoutY="537.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="71.0" styleClass="up-down-btn">
         <graphic>
         <ImageView fitHeight="39.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
@@ -63,4 +63,5 @@
     </graphic>
     </Button>
    <Label layoutX="66.0" layoutY="548.0" prefHeight="25.0" prefWidth="110.0" styleClass="cart-label" text="Purchase Now!" />
+   <Label layoutX="782.0" layoutY="109.0" prefHeight="25.0" prefWidth="64.0" styleClass="cart-label" text="Delete" />
 </Pane>
