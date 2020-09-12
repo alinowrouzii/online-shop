@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -25,11 +26,16 @@ public class LoginPageController implements Initializable {
     public Label wrongInformation;
     public Button signUpBtn;
     public ShoppingSystem shoppingSystem;
+    public PasswordField passwordTextField;
 
     @FXML
     public void login(ActionEvent actionEvent) {
 //        wrongInformation.setTextFill(Color.DARKRED);
+        if(userNameTextField.getText().equals("") || passwordTextField.getText().equals(""))
         wrongInformation.setVisible(true);
+        else {
+            shoppingSystem.login(userNameTextField.getText(),passwordTextField.getText());
+        }
 
     }
 

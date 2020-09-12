@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -27,6 +28,7 @@ public class SignUpController implements Initializable {
     public Button registerBtn;
     public TabPane tabPane;
     public Button loginBtn;
+    public Label wrongInputFormat;
 
 
     @FXML
@@ -48,7 +50,22 @@ public class SignUpController implements Initializable {
         root = FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Login page");
+        stage.setTitle("Main Menu page");
+        stage.show();
+    }
+    public void registerClicked(ActionEvent actionEvent) throws IOException{
+        if(firstNameTextField.getText().equals("") || lastNameTextField.getText().equals("") ||
+        passwordTextField.getText().equals("") || userNameTextField.getText().equals("") || emailTextField.getText().equals("")){
+            wrongInputFormat.setVisible(true);
+            return;
+        }
+        shoppingSystem.signUp("user","",userNameTextField.getText(),firstNameTextField.getText(),
+                lastNameTextField.getText(),emailTextField.getText(),"",passwordTextField.getText());
+        Stage stage= (Stage) registerBtn.getScene().getWindow();
+        Parent root=FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
+        Scene scene=new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Main Menu page");
         stage.show();
     }
 
@@ -56,4 +73,5 @@ public class SignUpController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         shoppingSystem=SystemInitializer.getShoppingSystem();
     }
+
 }
