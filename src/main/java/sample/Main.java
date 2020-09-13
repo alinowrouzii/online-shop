@@ -27,7 +27,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        SystemInitializer initialize = new SystemInitializer();
+        SystemInitializer initialize = new SystemInitializer(primaryStage);
 //        Parent root = FXMLLoader.load(new File("src/main/java/view/ManagerAccountPage.fxml").toURI().toURL());
         Parent root = FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
 
