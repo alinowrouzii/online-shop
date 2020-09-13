@@ -79,17 +79,17 @@ public class ShoppingSystem {
        return shop.getProductsManager().getProducts();
     }
 
-    public void addProductToCart(String productId){
+    public boolean addProductToCart(String productId,int amount){
         for(Product product:shop.getProductsManager().getProducts()){
-            if(product.getProductId().equals(productId) && product.isExists()){
-                cartProducts.addProduct(product,5) ;
-                return ;
+            if(product.getProductId().equals(productId) && product.isExists()&& cartProducts.addProduct(product,amount)){
+                return true ;
             }
         }
+        return false;
     }
 
-    public void removeProductFromCart(String productId){
-        cartProducts.removeProduct(productId,1) ;
+    public void removeProductFromCart(String productId,int amount){
+        cartProducts.removeProduct(productId,amount) ;
     }
 
     public ArrayList<Categoory> getCategories() {

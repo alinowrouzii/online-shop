@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -14,12 +16,14 @@ import model.ShoppingSystem;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigInteger;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CartController implements Initializable {
-    public VBox cartHBox;
+    public VBox cartVBox;
     public Button backButton;
     private ShoppingSystem shoppingSystem;
 
@@ -29,39 +33,27 @@ public class CartController implements Initializable {
         //TODO: uncomment when project complete!
 //        ArrayList<Product> products = shoppingSystem.getCartProduct();
 
-        try {
-            //Add ProductInfoHBox as a template
-            //We can add ProductInfoHBox as a many time and Edit that with their controllers
-            HBox box_1 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_1);
+        for(Product product:shoppingSystem.getCartProduct().keySet()) {
+            try {
+                FXMLLoader loader = new FXMLLoader(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
+                HBox box = loader.load();
+                int amount = shoppingSystem.getCartProduct().get(product) ;
+                ProductInfoHBox controller = loader.getController() ;
+                controller.deleteIcon.setOnMouseClicked(e -> {
+                    cartVBox.getChildren().remove(box);
+                    shoppingSystem.removeProductFromCart(product.getProductId(),amount);
+//                    System.out.println("amount"+amount);
+                });
 
-            HBox box_2 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_2);
-
-            HBox box_3 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_3);
-
-            HBox box_4 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_4);
-
-            HBox box_5 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_5);
-
-            HBox box_6 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_6);
-
-            HBox box_7 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_7);
-
-            HBox box_8 = FXMLLoader.load(new File("src/main/java/view/ProductInfoHBox.fxml").toURI().toURL());
-            cartHBox.getChildren().add(box_8);
-
-        } catch (IOException e) {
-            e.printStackTrace();
+                controller.setInfoOfProduct(product,amount);
+                cartVBox.getChildren().add(box);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
-    public void cartButtonClicked(MouseEvent mouseEvent) {
+    public void backButtonClicked(MouseEvent mouseEvent) {
         Stage stage;
         Parent root = null;
         stage = (Stage) backButton.getScene().getWindow();

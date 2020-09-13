@@ -33,7 +33,7 @@ public class Shop {
         categoriesManager.addCategory(cat); ;
         Seller seller = new Seller("rwlj123", "kkk", "jjjjj", "ll@qq","123456","132321","nothing");
 
-        Product product = new Product("13","book",new BigInteger("111000"),cat,seller,5);
+        Product product = new Product("13","booooook",new BigInteger("111000"),cat,seller,5);
         Product product2 = new Product("14","book1",new BigInteger("22000"),cat,seller,5);
         Product product3 = new Product("15","book2",new BigInteger("33000"),cat,seller,5);
         Product product4 = new Product("16","book3",new BigInteger("44000"),cat,seller,5);

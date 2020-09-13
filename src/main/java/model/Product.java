@@ -58,7 +58,7 @@ public class Product {
     }
 
     public void addAmountOfProducts(int amount){
-        if(amountOfProducts > 0 ){
+        if(amount > 0 ){
             this.amountOfProducts += amount ;
         }
         isExists = amountOfProducts > 0 ;
