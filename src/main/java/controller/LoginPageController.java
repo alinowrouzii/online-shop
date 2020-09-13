@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import model.ShoppingSystem;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -27,15 +28,25 @@ public class LoginPageController implements Initializable {
     public Button signUpBtn;
     public ShoppingSystem shoppingSystem;
     public PasswordField passwordTextField;
+    public Button loginButton;
 
     @FXML
-    public void login(ActionEvent actionEvent) {
+    public void login(ActionEvent actionEvent) throws IOException {
 //        wrongInformation.setTextFill(Color.DARKRED);
         if(userNameTextField.getText().equals("") || passwordTextField.getText().equals(""))
         wrongInformation.setVisible(true);
         else {
-            shoppingSystem.login(userNameTextField.getText(),passwordTextField.getText());
-
+            if (shoppingSystem.login(userNameTextField.getText(),passwordTextField.getText())){
+                Stage stage=(Stage) loginButton.getScene().getWindow();
+                Parent root=FXMLLoader.load(new File("src/main/java/view/ProductsPage.fxml").toURI().toURL());
+                Scene scene=new Scene(root);
+                stage.setScene(scene);
+                stage.setTitle("Our Products");
+                stage.show();
+            }
+            else {
+                wrongInformation.setVisible(true);
+            }
         }
 
     }
