@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.ShoppingSystem;
@@ -35,7 +34,7 @@ public class UserAccountController implements Initializable {
     public Label balanceLabel;
 
 
-    public void changeProfilePicture(MouseEvent mouseEvent) {
+    public void changeProfilePicture() {
 
         Stage stage = (Stage)profileImageView.getScene().getWindow();
         FileChooser fileChooser = new FileChooser();
@@ -46,7 +45,7 @@ public class UserAccountController implements Initializable {
         );
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
-            System.out.println(file.getPath().toString());
+            System.out.println(file.getPath());
         }
         Image image = null;
         try {

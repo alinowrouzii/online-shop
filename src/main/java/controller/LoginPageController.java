@@ -1,22 +1,13 @@
 package controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
 import model.ShoppingSystem;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -29,37 +20,23 @@ public class LoginPageController implements Initializable {
     public PasswordField passwordTextField;
 
     @FXML
-    public void login(ActionEvent actionEvent) {
+    public void login() {
 //        wrongInformation.setTextFill(Color.DARKRED);
         if(userNameTextField.getText().equals("") || passwordTextField.getText().equals(""))
-        wrongInformation.setVisible(true);
+            wrongInformation.setVisible(true);
         else {
             shoppingSystem.login(userNameTextField.getText(),passwordTextField.getText());
         }
 
     }
 
-    public void signUpBtnClicked(ActionEvent actionEvent) throws IOException {
-        Stage stage;
-        Parent root;
-        stage = (Stage) signUpBtn.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/signUpPage.fxml").toURI().toURL());
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Sign up");
-        stage.show();
-
+    public void signUpBtnClicked() {
+        SystemInitializer.showPage("sign up page");
+        System.out.println("successful");
     }
 
-    public void backBtnClicked(ActionEvent actionEvent) throws IOException {
-        Stage stage;
-        Parent root;
-        stage = (Stage) signUpBtn.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Sign up");
-        stage.show();
+    public void backBtnClicked() {
+        SystemInitializer.showPage("main menu page");
     }
 
     @Override

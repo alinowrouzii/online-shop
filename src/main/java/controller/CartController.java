@@ -1,25 +1,16 @@
 package controller;
 
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import model.Product;
 import model.ShoppingSystem;
 
 import java.io.File;
 import java.io.IOException;
-import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CartController implements Initializable {
@@ -53,20 +44,7 @@ public class CartController implements Initializable {
         }
     }
 
-    public void backButtonClicked(MouseEvent mouseEvent) {
-        Stage stage;
-        Parent root = null;
-        stage = (Stage) backButton.getScene().getWindow();
-        try {
-            root = FXMLLoader.load(new File("src/main/java/view/ProductsPage.fxml").toURI().toURL());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if(root != null){
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("Sign up");
-            stage.show();
-        }
+    public void backButtonClicked() {
+        SystemInitializer.showPage("products page");
     }
 }

@@ -2,24 +2,15 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 import model.Categoory;
 import model.Product;
 import model.Seller;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -38,13 +29,6 @@ public class SellerAccountController extends UserAccountController implements In
     public ImageView profileImageView;
     public TableView<Product> productsView;
 
-
-    //    @FXML
-//    private TableColumn<Product, String> Name;
-//    @FXML
-//    private TableColumn<Product, String> columnEmpLastName;
-//    @FXML
-//    private TableColumn<Product, String> columnEmpJobDesc;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

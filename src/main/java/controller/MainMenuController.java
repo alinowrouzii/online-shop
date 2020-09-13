@@ -22,9 +22,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
-    private Stage primaryStage;
-    private Parent root;
-    private Scene scene;
     public Button loginButton;
     public Button signUpButton;
     public Button productsButton;
@@ -36,28 +33,21 @@ public class MainMenuController implements Initializable {
         shoppingSystem=SystemInitializer.getShoppingSystem();
     }
 
-    public void loginButtonClicked(ActionEvent actionEvent) throws IOException {
-        primaryStage = (Stage) loginButton.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/LoginPage.fxml").toURI().toURL());
-        scene = new Scene(root);
-        primaryStage.setScene(scene);
+    public void loginButtonClicked() {
+        SystemInitializer.showPage("login page");
 
     }
 
-    public void signUpButtonClicked(ActionEvent actionEvent) throws IOException {
-        primaryStage = (Stage) signUpButton.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/signUpPage.fxml").toURI().toURL());
-        scene = new Scene(root);
-        primaryStage.setScene(scene);
+    public void signUpButtonClicked() {
+        SystemInitializer.showPage("sign up page");
     }
 
-    public void productsButtonClicked(ActionEvent actionEvent) throws IOException {
-        primaryStage = (Stage) signUpButton.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/ProductsPage.fxml").toURI().toURL());
-        scene = new Scene(root);
-        primaryStage.setScene(scene);
+    public void productsButtonClicked() {
+        SystemInitializer.showPage("products page");
+
     }
 
-    public void aboutButtonClicked(ActionEvent actionEvent) {
+    public void aboutButtonClicked() {
+        SystemInitializer.showPage("about us page");
     }
 }

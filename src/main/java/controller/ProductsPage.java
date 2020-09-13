@@ -2,7 +2,6 @@ package controller;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,19 +12,14 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javassist.tools.rmi.ObjectNotFoundException;
-import model.Product;
-import model.Shop;
-import model.ShoppingSystem;
 import javafx.stage.Stage;
-import org.controlsfx.control.RangeSlider;
+import model.Product;
+import model.ShoppingSystem;
 import view.ProductBox;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 public class ProductsPage implements Initializable {
@@ -95,7 +89,7 @@ public class ProductsPage implements Initializable {
         }
         return true;
     }
-    public void loginButtonClicked(ActionEvent actionEvent) {
+    public void loginButtonClicked() {
         Stage stage;
         Parent root = null;
         stage = (Stage) loginButton.getScene().getWindow();
@@ -112,7 +106,7 @@ public class ProductsPage implements Initializable {
         }
     }
 
-    public void cartButtonClicked(MouseEvent mouseEvent) {
+    public void cartButtonClicked() {
         Stage stage;
         Parent root = null;
         stage = (Stage) loginButton.getScene().getWindow();
@@ -129,11 +123,11 @@ public class ProductsPage implements Initializable {
         }
     }
 
-    public void nextButtonClicked(ActionEvent actionEvent) {
+    public void nextButtonClicked() {
         showOnProductPage("next");
     }
 
-    public void backButtonClicked(ActionEvent actionEvent)  {
+    public void backButtonClicked()  {
         showOnProductPage("back");
     }
 }

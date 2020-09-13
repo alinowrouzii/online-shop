@@ -32,28 +32,16 @@ public class SignUpController implements Initializable {
 
 
     @FXML
-    public void loginClicked(ActionEvent actionEvent) throws IOException {
-        Stage stage;
-        Parent root;
-        stage = (Stage) loginBtn.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/LoginPage.fxml").toURI().toURL());
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Login page");
-        stage.show();
+    public void loginClicked() {
+        SystemInitializer.showPage("login page");
+
     }
 
-    public void backClicked(ActionEvent actionEvent) throws IOException {
-        Stage stage;
-        Parent root;
-        stage = (Stage) loginBtn.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Main Menu page");
-        stage.show();
+    public void backClicked() {
+        SystemInitializer.showPage("main menu page");
+
     }
-    public void registerClicked(ActionEvent actionEvent) throws IOException{
+    public void registerClicked() throws IOException{
         if(firstNameTextField.getText().equals("") || lastNameTextField.getText().equals("") ||
         passwordTextField.getText().equals("") || userNameTextField.getText().equals("") || emailTextField.getText().equals("")){
             wrongInputFormat.setVisible(true);

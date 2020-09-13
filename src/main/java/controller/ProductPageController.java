@@ -1,24 +1,16 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 import model.ShoppingSystem;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -47,15 +39,8 @@ public class ProductPageController implements Initializable {
         addedLabel.setVisible(false);
     }
 
-    public void cartButtonClicked(MouseEvent mouseEvent) throws IOException {
-        Stage stage;
-        Parent root;
-        stage = (Stage) backButton.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/CartPage.fxml").toURI().toURL());
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Cart page");
-        stage.show();
+    public void cartButtonClicked() {
+        SystemInitializer.showPage("cart page");
     }
 
     private void setImagesOfProducts(String productId){
@@ -77,30 +62,24 @@ public class ProductPageController implements Initializable {
         setImagesOfProducts(productId);
     }
 
-    public void BackButtonClicked(ActionEvent actionEvent) throws IOException {
-        Stage stage;
-        Parent root;
-        stage = (Stage) backButton.getScene().getWindow();
-        root = FXMLLoader.load(new File("src/main/java/view/ProductsPage.fxml").toURI().toURL());
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Products page");
-        stage.show();
+    public void BackButtonClicked() {
+        SystemInitializer.showPage("products page");
+
     }
 
-    public void firstViewSelected(MouseEvent mouseEvent) {
+    public void firstViewSelected() {
         Image image = productView_1.getImage();
         if (image.getWidth()>0) {
             productView.setImage(image);
         }
     }
-    public void secondViewSelected(MouseEvent mouseEvent) {
+    public void secondViewSelected() {
         Image image = productView_2.getImage();
         if (image.getWidth()>0) {
             productView.setImage(image);
         }
     }
-    public void thirdViewSelected(MouseEvent mouseEvent) {
+    public void thirdViewSelected() {
         Image image = productView_3.getImage();
         if (image.getWidth()>0) {
             productView.setImage(image);
@@ -108,7 +87,7 @@ public class ProductPageController implements Initializable {
     }
 
 
-    public void addToCartButtonSelected(ActionEvent actionEvent) {
+    public void addToCartButtonSelected() {
         int amount = Integer.parseInt(this.amountOfProduct.getText());
         String productId = this.productId.getText();
         if(shoppingSystem.addProductToCart(productId, amount)){
