@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane prefHeight="257.0" prefWidth="211.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ProductBox">
+    <ImageView fitHeight="164.0" fitWidth="192.0" layoutX="9.0" pickOnBounds="true" preserveRatio="true"/>
+    <Rating layoutX="18.0" layoutY="218.0"/>
+    <Label alignment="center" layoutX="17.0" layoutY="164.0" prefHeight="24.0" prefWidth="176.0" text="Name"/>
+    <Label alignment="center" layoutX="18.0" layoutY="194.0" prefHeight="24.0" prefWidth="176.0" text="Price"/>
+</AnchorPane>
