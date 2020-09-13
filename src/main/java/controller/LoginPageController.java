@@ -35,6 +35,7 @@ public class LoginPageController implements Initializable {
         wrongInformation.setVisible(true);
         else {
             shoppingSystem.login(userNameTextField.getText(),passwordTextField.getText());
+
         }
 
     }
