@@ -1,17 +1,10 @@
 package controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 import model.ShoppingSystem;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -37,18 +30,16 @@ public class SignUpController implements Initializable {
     public TextField sellerFirstName;
     public CheckBox checkbox;
 
-
     @FXML
     public void loginClicked() {
         SystemInitializer.showPage("login page");
-
     }
 
     public void backClicked() {
         SystemInitializer.showPage("main menu page");
 
     }
-    public void registerClicked() throws IOException{
+    public void registerClicked() {
         if(firstNameTextField.getText().equals("") || lastNameTextField.getText().equals("") ||
         passwordTextField.getText().equals("") || userNameTextField.getText().equals("") || emailTextField.getText().equals("")
         || !checkbox.isSelected()){
@@ -57,14 +48,9 @@ public class SignUpController implements Initializable {
         }
         shoppingSystem.signUp("user","",userNameTextField.getText(),firstNameTextField.getText(),
                 lastNameTextField.getText(),emailTextField.getText(),"",passwordTextField.getText());
-        Stage stage= (Stage) registerBtn.getScene().getWindow();
-        Parent root=FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
-        Scene scene=new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Main Menu page");
-        stage.show();
+        SystemInitializer.showPage("main menu page");
     }
-    public void sellerRegisterClicked(ActionEvent actionEvent) throws IOException{
+    public void sellerRegisterClicked() {
         if(sellerEmail.getText().equals("") || sellerFirstName.getText().equals("") || sellerLastName.getText().equals("")
          || sellerPassword.getText().equals("") || sellerUsername.getText().equals("") || !sellerCheckBox.isSelected()
          || brand.getText().equals("") || category.getText().equals("")){
@@ -73,12 +59,7 @@ public class SignUpController implements Initializable {
         }
         shoppingSystem.signUp("seller",brand.getText(),sellerUsername.getText(),sellerFirstName.getText(),sellerLastName.getText()
         ,sellerEmail.getText(),"",sellerPassword.getText());
-        Stage stage=(Stage) sellerRegisterBtn.getScene().getWindow();
-        Parent root=FXMLLoader.load(new File("src/main/java/view/MainMenuPage.fxml").toURI().toURL());
-        Scene scene=new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Main Menu Page");
-        stage.show();
+        SystemInitializer.showPage("main menu page");
     }
 
     @Override

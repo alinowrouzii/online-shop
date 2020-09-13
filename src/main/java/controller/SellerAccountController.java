@@ -16,9 +16,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class SellerAccountController extends UserAccountController implements Initializable {
-    public Button profileButton;
-    public Button logsButton;
-    public Button wallet;
+
     public Label usernameLabel;
     public TextField fullNameTextField;
     public TextField emailTextField;
@@ -32,7 +30,7 @@ public class SellerAccountController extends UserAccountController implements In
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Product product =new Product("123","ff",new BigInteger("12000"),new Categoory("book",new ArrayList<String>()),new Seller("11125","ali","nn","qq@qq","123321","123321","qqw"),12);
+        Product product =new Product("123","ff",new BigInteger("12000"),new Categoory("book", new ArrayList<>()),new Seller("11125","ali","nn","qq@qq","123321","123321","qqw"),12);
 
         //TODO: get All seller product from shoppingSystem and convert to observableArrayList
         ObservableList<Product> data =

@@ -18,12 +18,7 @@ import java.util.ResourceBundle;
 
 public class UserAccountController implements Initializable {
     public ShoppingSystem shoppingSystem;
-    public Button profileButton;
-    public Button logsButton;
-    public Button wallet;
-    public ImageView profilePicture;
     public Label usernameLabel;
-    public Label typeLabel;
     public TextField fullNameTextField;
     public TextField emailTextField;
     public TextField phoneNumTextField;
@@ -49,16 +44,16 @@ public class UserAccountController implements Initializable {
         }
         Image image = null;
         try {
+            assert file != null;
             image = new Image(new FileInputStream(file.getPath()));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
         profileImageView.setImage(image);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        shoppingSystem=SystemInitializer.getShoppingSystem();
+        shoppingSystem  =SystemInitializer.getShoppingSystem();
     }
 }
