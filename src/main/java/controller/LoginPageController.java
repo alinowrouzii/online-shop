@@ -8,6 +8,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import model.ShoppingSystem;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -18,6 +19,7 @@ public class LoginPageController implements Initializable {
     public Button signUpBtn;
     public ShoppingSystem shoppingSystem;
     public PasswordField passwordTextField;
+    public Button loginButton;
 
     @FXML
     public void login() {
@@ -25,7 +27,12 @@ public class LoginPageController implements Initializable {
         if(userNameTextField.getText().equals("") || passwordTextField.getText().equals(""))
             wrongInformation.setVisible(true);
         else {
-            shoppingSystem.login(userNameTextField.getText(),passwordTextField.getText());
+            if (shoppingSystem.login(userNameTextField.getText(),passwordTextField.getText())){
+                SystemInitializer.showPage("products page");
+            }
+            else {
+                wrongInformation.setVisible(true);
+            }
         }
 
     }
