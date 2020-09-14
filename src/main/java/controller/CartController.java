@@ -32,7 +32,9 @@ public class CartController implements Initializable {
                 ProductInfoHBox controller = loader.getController() ;
                 controller.deleteIcon.setOnMouseClicked(e -> {
                     cartVBox.getChildren().remove(box);
-                    shoppingSystem.removeProductFromCart(product.getProductId(),amount);
+//                    int amount = Integer.parseInt(controller.productAmount.getText());
+                    //use -1 number to remove all amounts of product from cart
+                    shoppingSystem.removeProductFromCart(product.getProductId(),-1);
 //                    System.out.println("amount"+amount);
                 });
 

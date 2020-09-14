@@ -50,18 +50,26 @@ public class Cart {
     void removeProduct(String productId,int amount) {
         for (Product product :products.keySet()) {
             if(product.getProductId().equals(productId)){
-                if(products.get(product)>amount){
+                //use return phrase after all if else statement to avoid from concurrent modification exception
+                if(amount == -1){
+                    //it has never been used!
+                    int allAmount = products.get(product);
+                    products.remove(product);
+                    product.addAmountOfProducts(allAmount);
+                    return;
+                } else if(products.get(product)>amount){
                     int newAmount = products.get(product) - amount;
                     products.put(product,newAmount);
                     product.addAmountOfProducts(amount);
                     return;
-                }else if(products.get(product) == amount){
+                } else if(products.get(product) == amount){
                     products.remove(product);
                     product.addAmountOfProducts(amount);
                     return;
                 }
             }
         }
+        updateTotalPrice();
     }
     public BigInteger getTotalPrice() {
         return totalPrice ;

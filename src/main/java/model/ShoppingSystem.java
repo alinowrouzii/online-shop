@@ -114,7 +114,7 @@ public class ShoppingSystem {
         this.filteredProducts = Search.searchByProductName(productName, shop.getProductsManager().getProducts()) ;
     }
 
-    public void filterProductByPrice(BigInteger minPrice, BigInteger maxPrice){
+    public void filterProductsByPrice(BigInteger minPrice, BigInteger maxPrice){
         currentFilters.add(ProductFilterOptions.FILTERBYPRICE);
         if(filteredProducts.size()>0){
             this.filteredProducts = Search.searchByPrice(filteredProducts,minPrice,maxPrice) ;
@@ -123,7 +123,7 @@ public class ShoppingSystem {
         this.filteredProducts = Search.searchByPrice(shop.getProductsManager().getProducts(),minPrice,maxPrice) ;
     }
 
-    public void filterByExistingProducts(){
+    public void filterProductsByProductExistence(){
         currentFilters.add(ProductFilterOptions.FILTERBYEXISTING);
         if(filteredProducts.size()>0){
             this.filteredProducts = Search.searchByExisting(filteredProducts) ;

@@ -559,9 +559,9 @@ public class Interface {
                 System.err.println("category Not Found!");
             }
         }else if(input.contains("product price")){
-            shoppingSystem.filterProductByPrice(new BigInteger(input.trim().split(" ")[2]),new BigInteger(input.trim().split(" ")[3])) ;
+            shoppingSystem.filterProductsByPrice(new BigInteger(input.trim().split(" ")[2]),new BigInteger(input.trim().split(" ")[3])) ;
         }else if(input.contains("product existing")){
-            shoppingSystem.filterByExistingProducts() ;
+            shoppingSystem.filterProductsByProductExistence() ;
         }
         for (Product product : shoppingSystem.getFilteredProducts()){
             System.out.println(product.toString());

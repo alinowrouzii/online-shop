@@ -7,18 +7,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javassist.tools.rmi.ObjectNotFoundException;
 import model.Product;
 import model.ShoppingSystem;
 import view.ProductBox;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,6 +29,11 @@ public class ProductsPage implements Initializable {
     public ShoppingSystem shoppingSystem;
     public Button loginButton;
     public JFXButton cartButton;
+    public TextField byMinPrice;
+    public TextField byMaxPrice;
+    public TextField byProductName;
+    public TextField byCategoryName;
+    public CheckBox byProductExistence;
     private int startIndex;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -129,5 +136,32 @@ public class ProductsPage implements Initializable {
 
     public void backButtonClicked()  {
         showOnProductPage("back");
+    }
+
+    public void filterProducts() {
+        if(!byMinPrice.getText().isEmpty() && !byMaxPrice.getText().isEmpty()){
+            shoppingSystem.filterProductsByPrice(new BigInteger(byMinPrice.getText()),new BigInteger(byMaxPrice.getText()));
+        }
+        if(!byProductName.getText().isEmpty()){
+            shoppingSystem.filterProductsByName(byProductName.getText());
+        }
+        if(!byCategoryName.getText().isEmpty()){
+            try {
+                shoppingSystem.filterProductsByCategoryName(byCategoryName.getText());
+            } catch (ObjectNotFoundException ignored) {
+                //TODO
+            }
+        }
+        if(!byProductExistence.isSelected()){
+            shoppingSystem.filterProductsByProductExistence();
+        }
+        //to refresh products page view
+        SystemInitializer.showPage("products page");
+    }
+
+    public void disableFiltering() {
+        shoppingSystem.disableFiltering();
+        //to refresh products page view
+        SystemInitializer.showPage("products page");
     }
 }
