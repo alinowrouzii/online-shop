@@ -9,6 +9,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
 <Pane prefHeight="600.0" prefWidth="1000.0" stylesheets="@/styles/account.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductPageController">
     <ImageView fitHeight="600.0" fitWidth="1000.0">
@@ -35,12 +36,32 @@
             <Label fx:id="productBrand" alignment="CENTER" layoutX="263.0" layoutY="141.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Nowrouz" />
             <Label fx:id="productCategory" alignment="CENTER" layoutX="263.0" layoutY="190.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Category" />
             <Label fx:id="productPrice" alignment="CENTER" layoutX="263.0" layoutY="236.0" prefHeight="33.0" prefWidth="144.0" styleClass="product-value-label" text="Label" />
-            <Button fx:id="addToCartButton" layoutX="97.0" layoutY="315.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" styleClass="add-to-cart-button" text="Add to Cart!" onAction="#addToCartButtonSelected"/>
-            <TextField fx:id="amountOfProduct" layoutX="312.0" layoutY="320.0" prefHeight="25.0" prefWidth="46.0" styleClass="textField" />
-            <Label alignment="CENTER" layoutX="250.0" layoutY="316.0" prefHeight="33.0" prefWidth="62.0" style="-fx-font-size: 15px" text="Amount" />
+            <Button fx:id="addToCartButton" layoutX="97.0" layoutY="315.0" mnemonicParsing="false" onAction="#addToCartButtonSelected" prefHeight="35.0" prefWidth="132.0" styleClass="add-to-cart-button" text="Add to Cart!" />
+            <TextField fx:id="amountOfProduct" layoutX="313.0" layoutY="320.0" prefHeight="25.0" prefWidth="46.0" styleClass="textField" />
+            <Label alignment="CENTER" layoutX="244.0" layoutY="316.0" prefHeight="33.0" prefWidth="62.0" style="-fx-font-size: 15px" text="Amount" />
             <Label alignment="CENTER" layoutX="85.0" layoutY="395.0" prefHeight="34.0" prefWidth="127.0" styleClass="cart-label" text="Description" />
             <TextArea fx:id="descriptionTextArea" editable="false" layoutX="63.0" layoutY="446.0" prefHeight="200.0" prefWidth="414.0" wrapText="true" />
-         <Label fx:id="addedLabel" alignment="CENTER" layoutX="366.0" layoutY="314.0" prefHeight="33.0" prefWidth="62.0" style="-fx-font-size: 15px" text="Added!" />
+         <Label fx:id="addedLabel" alignment="CENTER" layoutX="306.0" layoutY="349.0" prefHeight="33.0" prefWidth="62.0" style="-fx-font-size: 15px" text="Added!" />
+            <VBox alignment="CENTER" layoutX="363.0" layoutY="309.0" prefHeight="15.0" prefWidth="37.0">
+                <Button mnemonicParsing="false" onAction="#amountIncreasedOne" prefHeight="25.0" prefWidth="38.0"
+                        styleClass="up-down-btn">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../../resources/icons/up_icon.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#amountDecreasedOne" prefHeight="25.0" prefWidth="38.0"
+                        styleClass="up-down-btn">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/icons/down-icon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
         </Pane>
     </ScrollPane>
    <JFXButton fx:id="cartButton" layoutX="794.0" layoutY="9.0" onMouseClicked="#cartButtonClicked" prefHeight="72.0" prefWidth="72.0" styleClass="cart-icon">

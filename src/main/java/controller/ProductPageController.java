@@ -94,4 +94,22 @@ public class ProductPageController implements Initializable {
             addedLabel.setVisible(true);
         }
     }
+
+    public void amountIncreasedOne() {
+        String amount=amountOfProduct.getText();
+        if(amount.isEmpty()){
+            amountOfProduct.setText("1");
+        }else{
+            int oldAmount= Integer.parseInt(amountOfProduct.getText());
+            amountOfProduct.setText((oldAmount+1)+"");
+        }
+    }
+
+    public void amountDecreasedOne() {
+        String amount = amountOfProduct.getText();
+        if(!amount.isEmpty() && !amount.equals("1")) {
+            int oldAmount= Integer.parseInt(amountOfProduct.getText());
+            amountOfProduct.setText((oldAmount-1)+"");
+        }
+    }
 }
