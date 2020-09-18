@@ -1,5 +1,6 @@
 package controller;
 
+import exception.HasNotLoggedInException;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,7 +10,9 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.ShoppingSystem;
+import model.User;
 
+import javax.jws.soap.SOAPBinding;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,7 +30,20 @@ public class UserAccountController implements Initializable {
     public Label idLabel;
     public ImageView profileImageView;
     public Label balanceLabel;
+    public User currentUser;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        shoppingSystem  =SystemInitializer.getShoppingSystem();
+        try {
+            currentUser=shoppingSystem.getCurrentUser();
+        } catch (HasNotLoggedInException e) {
+            e.printStackTrace();
+        }
+        usernameLabel.setText(currentUser.getId());
+        fullNameTextField.setText("");
+        //TODO: ??
+    }
 
     public void changeProfilePicture() {
 
@@ -52,8 +68,5 @@ public class UserAccountController implements Initializable {
         profileImageView.setImage(image);
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        shoppingSystem  =SystemInitializer.getShoppingSystem();
-    }
+
 }
