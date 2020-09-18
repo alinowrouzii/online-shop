@@ -13,9 +13,9 @@
     <JFXTabPane layoutX="42.0" layoutY="37.0" prefHeight="539.0" prefWidth="900.0">
         <Tab text="my profile">
             <Pane>
-                <Label fx:id="usernameLabel" layoutX="391.0" layoutY="101.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="First name" />
-                <TextField fx:id="fullNameTextField" layoutX="533.0" layoutY="143.0" promptText="last name" styleClass="textField" />
-                <TextField layoutX="533.0" layoutY="100.0" promptText="first name" styleClass="textField" />
+                <Label  layoutX="391.0" layoutY="101.0" prefHeight="23.0" prefWidth="98.0" styleClass="id-label" text="First name" />
+                <TextField fx:id="lastNameTextField" layoutX="533.0" layoutY="143.0" promptText="name" styleClass="textField" />
+                <TextField fx:id="firstNameField" layoutX="533.0" layoutY="100.0" promptText="first name" styleClass="textField" />
                 <TextField fx:id="emailTextField" layoutX="533.0" layoutY="186.0" promptText="Email" styleClass="textField" />
                 <TextField fx:id="phoneNumTextField" layoutX="533.0" layoutY="229.0" promptText="Phone Number" styleClass="textField" />
 
@@ -32,9 +32,9 @@
             <Label layoutX="360.0" layoutY="328.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="Current password" />
             <Label layoutX="360.0" layoutY="365.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="new password" />
             <Label layoutX="360.0" layoutY="402.0" prefHeight="23.0" prefWidth="129.0" styleClass="id-label" text="confirm  password" />
-            <PasswordField layoutX="533.0" layoutY="327.0" promptText="your password" styleClass="textField" />
-            <PasswordField layoutX="533.0" layoutY="364.0" promptText="new password" styleClass="textField" />
-            <PasswordField layoutX="533.0" layoutY="401.0" promptText="confirm password" styleClass="textField" />
+            <PasswordField fx:id="passwordField" layoutX="533.0" layoutY="327.0" promptText="your password" styleClass="textField" />
+            <PasswordField fx:id="newPass" layoutX="533.0" layoutY="364.0" promptText="new password" styleClass="textField" />
+            <PasswordField fx:id="confirmPass" layoutX="533.0" layoutY="401.0" promptText="confirm password" styleClass="textField" />
             <Label layoutX="360.0" layoutY="292.0" prefHeight="23.0" prefWidth="125.0" styleClass="id-label" text="change password" />
             <Label layoutX="687.0" layoutY="331.0" prefHeight="17.0" prefWidth="117.0" styleClass="wrong-info" text="Wrong password" />
             <Label layoutX="562.0" layoutY="434.0" prefHeight="17.0" prefWidth="150.0" styleClass="wrong-info" text="Password not match!" />

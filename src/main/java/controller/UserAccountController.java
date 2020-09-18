@@ -4,6 +4,7 @@ import exception.HasNotLoggedInException;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -13,6 +14,7 @@ import model.ShoppingSystem;
 import model.User;
 
 import javax.jws.soap.SOAPBinding;
+import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -21,8 +23,7 @@ import java.util.ResourceBundle;
 
 public class UserAccountController implements Initializable {
     public ShoppingSystem shoppingSystem;
-    public Label usernameLabel;
-    public TextField fullNameTextField;
+    public TextField lastNameTextField;
     public TextField emailTextField;
     public TextField phoneNumTextField;
     public Button submit;
@@ -31,6 +32,10 @@ public class UserAccountController implements Initializable {
     public ImageView profileImageView;
     public Label balanceLabel;
     public User currentUser;
+    public PasswordField passwordField;
+    public PasswordField newPass;
+    public PasswordField confirmPass;
+    public TextField firstNameField;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,9 +45,19 @@ public class UserAccountController implements Initializable {
         } catch (HasNotLoggedInException e) {
             e.printStackTrace();
         }
-        usernameLabel.setText(currentUser.getId());
-        fullNameTextField.setText("");
-        //TODO: ??
+        firstNameField.setText(currentUser.getFirstName());
+        idLabel.setText(currentUser.getId());
+        lastNameTextField.setText(currentUser.getLastName());
+        emailTextField.setText(currentUser.getEmail());
+        phoneNumTextField.setText(currentUser.getPhoneNumber());
+        balanceLabel.setText(currentUser.getBalance().toString());
+        passwordField.setText(currentUser.getPassword());
+    }
+    public void changePassClicked(ActionEvent actionEvent){
+        //TODO: change password
+    }
+    public void submitChanges(ActionEvent actionEvent){
+        //TODO: submit changes
     }
 
     public void changeProfilePicture() {

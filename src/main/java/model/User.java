@@ -38,7 +38,7 @@ public class User {
         }
         return false;
     }
-    BigInteger getBalance(){
+    public BigInteger getBalance(){
         return balance;
     }
     public void addLog(Log log){
@@ -79,58 +79,58 @@ public class User {
     }
     //no need for setId method
 
-    String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    void setFirstName(String firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    void setLastName(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    String getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    void setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
-    String getCredit(){
+    public String getCredit(){
         return credit;
     }
 
-    void setCredit(String credit) {
+    public void setCredit(String credit) {
         this.credit = credit;
     }
 
-    boolean isLoggedIn() {
+    public boolean isLoggedIn() {
         return isLoggedIn;
     }
 
-    void setLoggedIn(boolean loggedIn) {
+    public void setLoggedIn(boolean loggedIn) {
         isLoggedIn = loggedIn;
     }
     public ArrayList<Log> getLogs() {
