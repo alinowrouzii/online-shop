@@ -1,6 +1,7 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import exception.HasNotLoggedInException;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -14,11 +15,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javassist.tools.rmi.ObjectNotFoundException;
-import model.Product;
-import model.ShoppingSystem;
+import model.*;
 import view.ProductBox;
 
+import javax.jws.soap.SOAPBinding;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.net.URL;
@@ -34,10 +36,17 @@ public class ProductsPage implements Initializable {
     public TextField byProductName;
     public TextField byCategoryName;
     public CheckBox byProductExistence;
+    public Button profileButton;
+    public User currentUser;
     private int startIndex;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         shoppingSystem = SystemInitializer.getShoppingSystem();
+        try{
+            currentUser=shoppingSystem.getCurrentUser();
+        } catch (HasNotLoggedInException e) {
+            profileButton.setVisible(false);
+        }
         System.out.println("11"+shoppingSystem);
 
         showOnProductPage("first");
@@ -128,6 +137,30 @@ public class ProductsPage implements Initializable {
             stage.setTitle("Cart");
             stage.show();
         }
+    }
+    public void openProfile(ActionEvent actionEvent){
+        Stage stage=(Stage) profileButton.getScene().getWindow();
+        Parent root=null;
+        String src="src/main/java/view/";
+        if(currentUser instanceof Manager){
+            src+="ManagerAccountPage";
+        }
+        else if(currentUser instanceof Seller){
+            src+="SellerAccountPage";
+        }
+        else {
+            src+="UserAccountPage";
+        }
+        src+=".fxml";
+        try {
+            root=FXMLLoader.load(new File(src).toURI().toURL());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene=new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Profile");
+        stage.show();
     }
 
     public void nextButtonClicked() {
